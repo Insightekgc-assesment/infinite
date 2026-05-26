@@ -10,18 +10,18 @@ function smoothParallax(){
 
     carouselImages.forEach((img) => {
 
-        /* Smooth Zoom */
+        /* Very subtle zoom */
 
         const scale =
-        1 + Math.min(scrollY * 0.00035, 0.12);
+        1 + Math.min(scrollY * 0.00008, 0.03);
 
-        /* Slight Vertical Movement */
+        /* Very slight movement */
 
         const translateY =
-        scrollY * 0.12;
+        scrollY * 0.04;
 
         img.style.transform =
-        `scale(${scale}) translateY(${translateY}px)`;
+        `scale(${scale}) translate3d(0, ${translateY}px, 0)`;
     });
 
     ticking = false;
@@ -34,6 +34,7 @@ window.addEventListener('scroll', () => {
         window.requestAnimationFrame(() => {
 
             smoothParallax();
+
         });
 
         ticking = true;
