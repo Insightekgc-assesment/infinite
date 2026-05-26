@@ -1,42 +1,12 @@
-const carouselImages = document.querySelectorAll(
-  '.header-carousel .carousel-item img'
-);
-
-let ticking = false;
-
-function smoothParallax(){
-
+document.addEventListener('scroll', function () {
     const scrollY = window.scrollY;
+    const images = document.querySelectorAll('.header-carousel .carousel-item img');
 
-    carouselImages.forEach((img) => {
+    images.forEach((img) => {
+        const scale = 1 + (scrollY * 0.0015);
 
-        /* Very subtle zoom */
-
-        const scale =
-        1 + Math.min(scrollY * 0.00008, 0.03);
-
-        /* Very slight movement */
-
-        const translateY =
-        scrollY * 0.04;
-
-        img.style.transform =
-        `scale(${scale}) translate3d(0, ${translateY}px, 0)`;
+        if (scale <= 1.4) {
+            img.style.transform = `scale(${scale})`;
+        }
     });
-
-    ticking = false;
-}
-
-window.addEventListener('scroll', () => {
-
-    if(!ticking){
-
-        window.requestAnimationFrame(() => {
-
-            smoothParallax();
-
-        });
-
-        ticking = true;
-    }
 });
