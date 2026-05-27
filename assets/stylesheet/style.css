@@ -1465,19 +1465,16 @@
 /* =========================================================
    PREMIUM FIXED BACKGROUND SECTION
 ========================================================= */
-
-.fixed-showcase{
+.fixed-showcase {
   position: relative;
   width: 100%;
   min-height: 100vh;
 
-  background-image:
-    url("../images/fixedBackground.png");
-
+  background-image: url("../images/fixedBackground.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: fixed;           /* Desktop only */
 
   overflow: hidden;
 
@@ -1492,29 +1489,25 @@
    GLOW EFFECTS
 ========================================================= */
 
-.fixed-glow{
+.fixed-glow {
   position: absolute;
   border-radius: 50%;
   filter: blur(90px);
   z-index: 1;
 }
 
-.fixed-glow-1{
+.fixed-glow-1 {
   width: 260px;
   height: 260px;
-
   background: rgba(255,255,255,0.08);
-
   top: 10%;
   left: 8%;
 }
 
-.fixed-glow-2{
+.fixed-glow-2 {
   width: 220px;
   height: 220px;
-
   background: rgba(255,255,255,0.06);
-
   bottom: 10%;
   right: 8%;
 }
@@ -1523,153 +1516,139 @@
    CONTENT
 ========================================================= */
 
-.fixed-content{
+.fixed-content {
   position: relative;
   z-index: 2;
-
   width: min(900px, 92%);
   text-align: center;
 }
 
 /* =========================================================
-   TAG
+   TAG, HEADING, PARAGRAPH, BUTTONS
 ========================================================= */
 
-.fixed-tag{
+.fixed-tag {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   padding: 12px 22px;
-
   border-radius: 100px;
-
   background: rgba(255,255,255,0.10);
-
   border: 1px solid rgba(255,255,255,0.15);
-
   backdrop-filter: blur(12px);
-
   color: var(--white);
-
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 2px;
-
   margin-bottom: 28px;
 }
 
-/* =========================================================
-   HEADING
-========================================================= */
-
-.fixed-content h2{
+.fixed-content h2 {
   font-size: clamp(3rem, 7vw, 6rem);
-
   line-height: 1.05;
   font-weight: 800;
-
   color: var(--white);
-
   margin-bottom: 28px;
 }
 
-/* =========================================================
-   PARAGRAPH
-========================================================= */
-
-.fixed-content p{
+.fixed-content p {
   width: min(760px, 100%);
   margin: auto;
-
   font-size: 1.12rem;
   line-height: 2;
-
   color: rgba(255,255,255,0.82);
-
   margin-bottom: 42px;
 }
 
-/* =========================================================
-   BUTTONS
-========================================================= */
-
-.fixed-buttons{
+.fixed-buttons {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-
   gap: 18px;
 }
 
-.fixed-buttons a{
+.fixed-buttons a {
   padding: 16px 30px;
-
   border-radius: 14px;
-
   text-decoration: none;
-
   font-weight: 700;
-
   transition: 0.4s ease;
 }
 
-/* PRIMARY */
-
-.fixed-buttons a:first-child{
+/* Primary Button */
+.fixed-buttons a:first-child {
   background: var(--white);
   color: var(--primary);
 }
 
-/* SECONDARY */
-
-.fixed-buttons a:last-child{
+/* Secondary Button */
+.fixed-buttons a:last-child {
   border: 1px solid rgba(255,255,255,0.18);
-
   background: rgba(255,255,255,0.08);
-
   backdrop-filter: blur(10px);
-
   color: var(--white);
 }
 
-/* HOVER */
-
-.fixed-buttons a:hover{
+.fixed-buttons a:hover {
   transform: translateY(-5px);
 }
 
 /* =========================================================
-   RESPONSIVE
+   MOBILE OPTIMIZATIONS
 ========================================================= */
 
-@media (max-width: 768px){
-
-  .fixed-showcase{
-    min-height: 85vh;
-
-    background-attachment: scroll;
-
-    padding: 90px 20px;
+@media (max-width: 768px) {
+  .fixed-showcase {
+    min-height: 100vh;
+    background-attachment: scroll;           /* Important for mobile */
+    background-position: center 30%;         /* Adjust focal point */
+    padding: 100px 20px 80px;
   }
 
-  .fixed-content h2{
+  /* Optional: Slightly darken overlay for better text readability on mobile */
+  .fixed-showcase::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(5, 29, 73, 0.45);       /* Deep blue overlay */
+    z-index: 1;
+  }
+
+  .fixed-glow-1,
+  .fixed-glow-2 {
+    display: none;                           /* Hide heavy glows on mobile for performance */
+  }
+
+  .fixed-content {
+    z-index: 2;
+  }
+
+  .fixed-content h2 {
     font-size: 2.8rem;
   }
 
-  .fixed-content p{
-    font-size: 1rem;
-    line-height: 1.9;
+  .fixed-content p {
+    font-size: 1.05rem;
+    line-height: 1.85;
   }
 
-  .fixed-buttons{
+  .fixed-buttons {
     flex-direction: column;
+    gap: 16px;
   }
 
-  .fixed-buttons a{
+  .fixed-buttons a {
     width: 100%;
-    max-width: 320px;
+    max-width: 340px;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  .fixed-showcase {
+    background-position: center 35%;         /* Fine-tune image focus */
+    padding: 90px 16px 70px;
   }
 }
 /* =========================================================
