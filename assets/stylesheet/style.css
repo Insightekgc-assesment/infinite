@@ -1,7 +1,479 @@
-/* index page css */
-/*
-  NOTE:
-  Hero styles were moved to assets/stylesheet/hero.css to keep things clean.
-  This file can remain for other page-specific CSS.
-*/
+/* =========================================================
+   PREMIUM HEADER CAROUSEL
+========================================================= */
 
+.header-carousel .carousel-item{
+    position: relative;
+
+    /* Avoid 100vh on mobile address bar */
+    min-height: 320px;
+    height: 100svh;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   DESKTOP IMAGE
+========================================================= */
+
+.header-carousel .carousel-item img{
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transform: scale(1);
+
+    transition:
+    transform 1.2s ease-out;
+
+    will-change: transform;
+
+    backface-visibility: hidden;
+}
+
+/* =========================================================
+   MOBILE / TABLET IMAGE SWITCH
+========================================================= */
+
+.mobile-carousel-img{
+    display: none;
+}
+
+.desktop-carousel-img{
+    display: block;
+}
+
+/* =========================================================
+   CAPTION
+========================================================= */
+
+.carousel-caption{
+    position: absolute;
+
+    z-index: 2;
+
+    left: 8%;
+    right: 8%;
+
+    bottom: 14%;
+
+    text-align: left;
+
+    max-width: 760px;
+
+    padding: 0;
+}
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.banner-heading{
+    color: var(--logo);
+
+    font-size: clamp(2.6rem, 5vw, 5rem);
+
+    font-weight: 900;
+
+    line-height: 1.05;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 18px;
+
+    text-shadow:
+    0 6px 18px rgba(0,0,0,0.35);
+}
+
+/* =========================================================
+   PARAGRAPH
+========================================================= */
+
+.head-para{
+    color: rgba(255,255,255,0.88);
+
+    font-size: 1.08rem;
+
+    line-height: 1.85;
+
+    max-width: 620px;
+
+    text-shadow:
+    0 3px 10px rgba(0,0,0,0.35);
+}
+
+/* =========================================================
+   ABOUT HEADER
+========================================================= */
+
+.about-header{
+    position: relative;
+
+    min-height: 100vh;
+
+    overflow: hidden;
+
+    background-image:
+    linear-gradient(
+        rgba(0,0,0,0.35),
+        rgba(0,0,0,0.35)
+    ),
+    url("../images/indexHero.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+}
+
+/* =========================================================
+   DESKTOP PARALLAX
+========================================================= */
+
+@media(min-width: 992px){
+
+    .about-header{
+        background-attachment: fixed;
+    }
+}
+
+/* =========================================================
+   SOFT OVERLAY
+========================================================= */
+
+.about-header::before{
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+    radial-gradient(
+        circle at top right,
+        rgba(255,215,0,0.10),
+        transparent 35%
+    );
+
+    z-index: 1;
+}
+
+/* =========================================================
+   ABOUT CONTENT
+========================================================= */
+
+.about-header-content{
+    position: relative;
+
+    z-index: 2;
+
+    color: #fff;
+
+    text-align: center;
+
+    padding: 120px 20px;
+}
+
+/* =========================================================
+   RIGHT SLIDER FIX
+========================================================= */
+
+.right-slider{
+    position: relative;
+
+    z-index: 999;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media(max-width: 992px){
+
+    /* Image switch */
+
+    .desktop-carousel-img{
+        display: none;
+    }
+
+    .mobile-carousel-img{
+        display: block;
+    }
+
+    .carousel-item{
+        height: 78vh;
+    }
+
+    .carousel-caption{
+
+        bottom: 12%;
+
+        max-width: 100%;
+
+        text-align: center;
+    }
+
+    .banner-heading{
+
+        font-size: 3rem;
+
+        line-height: 1.1;
+    }
+
+    .head-para{
+
+        margin-inline: auto;
+    }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width: 768px){
+
+    .carousel-item{
+        height: 68vh;
+
+        min-height: 300px;
+    }
+
+    .carousel-caption{
+
+        left: 6%;
+        right: 6%;
+
+        bottom: 10%;
+    }
+
+    .banner-heading{
+
+        font-size: 2rem;
+
+        letter-spacing: -1px;
+    }
+
+    .head-para{
+
+        font-size: .95rem;
+
+        line-height: 1.7;
+    }
+
+    .about-header-content{
+        padding: 90px 18px;
+    }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media(max-width: 576px){
+
+    .carousel-item{
+        height: 60vh;
+    }
+
+    .banner-heading{
+        font-size: 1.7rem;
+    }
+
+    .head-para{
+        font-size: .9rem;
+    }
+}
+
+
+/* First Section Start */
+
+
+.first-section {
+      min-height: 100vh;
+      background: var(--primary);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      color: var(--white);
+      isolation: isolate;
+    }
+
+    /* Advanced Background Layers */
+    .first-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 35% 25%, rgba(212, 175, 55, 0.18), transparent 55%);
+      z-index: 1;
+    }
+
+    .first-section::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: 
+        radial-gradient(circle at 80% 70%, rgba(245, 197, 66, 0.08), transparent 50%),
+        linear-gradient(180deg, transparent 30%, rgba(5, 29, 73, 0.6) 100%);
+      z-index: 1;
+      opacity: 0.85;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      position: relative;
+      z-index: 3;
+    }
+
+    .hero-panel {
+      max-width: 920px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 7rem 0 5.5rem;
+    }
+
+    /* Glassmorphic Badge */
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255, 255, 255, 0.07);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      padding: 12px 28px;
+      border-radius: 50px;
+      font-size: 1.02rem;
+      font-weight: 500;
+      margin-bottom: 2.2rem;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+      transition: all 0.4s ease;
+    }
+
+    .hero-badge:hover {
+      transform: translateY(-3px);
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    .display-4 {
+      font-size: clamp(3.2rem, 6.5vw, 4.8rem);
+      font-weight: 850;
+      line-height: 1.02;
+      margin-bottom: 1.8rem;
+      letter-spacing: -0.04em;
+      position: relative;
+    }
+
+    .display-4 span {
+      background: var(--golden);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 4px 12px rgba(212, 175, 55, 0.4));
+    }
+
+    .lead {
+      font-size: 1.38rem;
+      line-height: 1.68;
+      color: #c8d4e8;
+      max-width: 760px;
+      margin: 0 auto 4.2rem;
+      font-weight: 400;
+    }
+
+    .highlight {
+      font-weight: 700;
+      background: var(--golden);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Advanced CTA Grid */
+    .cta-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
+      gap: 1.4rem;
+      max-width: 880px;
+      margin: 0 auto;
+    }
+
+    .btn {
+      padding: 1.35rem 2.1rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 16px;
+      text-decoration: none;
+      transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      position: relative;
+      overflow: hidden;
+      border: 2px solid transparent;
+    }
+
+    /* Primary Button with Shine Effect */
+    .btn-primary {
+      background: var(--golden);
+      color: var(--black);
+      font-weight: 700;
+      box-shadow: var(--golden-glow), 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .btn-primary::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -100%;
+      width: 50%;
+      height: 200%;
+      background: linear-gradient(120deg, transparent, rgba(255,255,255,0.7), transparent);
+      transition: 0.7s;
+    }
+
+    .btn-primary:hover::before {
+      left: 200%;
+    }
+
+    .btn-primary:hover {
+      transform: scale(1.05) translateY(-6px);
+      box-shadow: 0 20px 45px rgba(212, 175, 55, 0.6);
+      color: var(--black);
+    }
+
+    /* Outline Button */
+    .btn-outline-primary {
+      background: transparent;
+      color: var(--white);
+      border: 2px solid rgba(255, 255, 255, 0.4);
+    }
+
+    .btn-outline-primary:hover {
+      border-color: #FFD700;
+      background: rgba(253, 200, 70, 0.12);
+      transform: scale(1.05) translateY(-6px);
+      box-shadow: 0 15px 35px rgba(212, 175, 55, 0.25);
+    }
+
+    /* Decorative Golden Ring */
+    .golden-ornament {
+      position: absolute;
+      width: 260px;
+      height: 260px;
+      border: 1px solid rgba(253, 200, 70, 0.2);
+      border-radius: 50%;
+      top: 22%;
+      right: 8%;
+      z-index: 2;
+      pointer-events: none;
+      animation: rotate 35s linear infinite;
+    }
+
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }

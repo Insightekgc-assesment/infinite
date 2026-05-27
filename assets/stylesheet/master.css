@@ -4,6 +4,22 @@
     box-sizing: border-box;
 }
 
+/* assets/stylesheet/navbar.css */
+
+:root {
+  --primary: #051D49;
+  --black: #000000;
+  --white: #FFFFFF;
+
+  /* Golden Gradient */
+  --golden: linear-gradient(
+    135deg,
+    #D4AF37,
+    #FFD700,
+    #F5C542
+  );
+}
+
 
 
  body {
