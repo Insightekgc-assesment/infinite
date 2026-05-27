@@ -1465,17 +1465,13 @@
 /* =========================================================
    PREMIUM FIXED BACKGROUND SECTION
 ========================================================= */
+/* =========================================================
+   SECTION WRAPPER
+========================================================= */
 .fixed-showcase {
   position: relative;
   width: 100%;
   min-height: 100vh;
-
-  background-image: url("../images/fixedBackground.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;           /* Desktop only */
-
   overflow: hidden;
 
   display: flex;
@@ -1486,9 +1482,28 @@
 }
 
 /* =========================================================
+   BACKGROUND IMAGE LAYER (IMPORTANT FIX)
+========================================================= */
+.bg-image {
+  position: absolute;
+  inset: 0;
+  background: url("../images/fixedBackground.png") center/cover no-repeat;
+  z-index: 0;
+}
+
+/* =========================================================
+   OVERLAY
+========================================================= */
+.fixed-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(5, 29, 73, 0.35);
+  z-index: 1;
+}
+
+/* =========================================================
    GLOW EFFECTS
 ========================================================= */
-
 .fixed-glow {
   position: absolute;
   border-radius: 50%;
@@ -1515,7 +1530,6 @@
 /* =========================================================
    CONTENT
 ========================================================= */
-
 .fixed-content {
   position: relative;
   z-index: 2;
@@ -1523,46 +1537,43 @@
   text-align: center;
 }
 
-/* =========================================================
-   TAG, HEADING, PARAGRAPH, BUTTONS
-========================================================= */
-
+/* TAG */
 .fixed-tag {
   display: inline-flex;
-  align-items: center;
-  justify-content: center;
   padding: 12px 22px;
   border-radius: 100px;
   background: rgba(255,255,255,0.10);
   border: 1px solid rgba(255,255,255,0.15);
   backdrop-filter: blur(12px);
-  color: var(--white);
+  color: #fff;
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 2px;
   margin-bottom: 28px;
 }
 
+/* HEADING */
 .fixed-content h2 {
-  font-size: clamp(3rem, 7vw, 6rem);
+  font-size: clamp(2.5rem, 6vw, 5.5rem);
   line-height: 1.05;
   font-weight: 800;
-  color: var(--white);
+  color: #fff;
   margin-bottom: 28px;
 }
 
+/* PARAGRAPH */
 .fixed-content p {
-  width: min(760px, 100%);
+  max-width: 760px;
   margin: auto;
-  font-size: 1.12rem;
-  line-height: 2;
+  font-size: 1.1rem;
+  line-height: 1.9;
   color: rgba(255,255,255,0.82);
   margin-bottom: 42px;
 }
 
+/* BUTTONS */
 .fixed-buttons {
   display: flex;
-  align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   gap: 18px;
@@ -1573,21 +1584,21 @@
   border-radius: 14px;
   text-decoration: none;
   font-weight: 700;
-  transition: 0.4s ease;
+  transition: 0.3s ease;
 }
 
-/* Primary Button */
+/* Primary */
 .fixed-buttons a:first-child {
-  background: var(--white);
-  color: var(--primary);
+  background: #fff;
+  color: #051d49;
 }
 
-/* Secondary Button */
+/* Secondary */
 .fixed-buttons a:last-child {
   border: 1px solid rgba(255,255,255,0.18);
   background: rgba(255,255,255,0.08);
+  color: #fff;
   backdrop-filter: blur(10px);
-  color: var(--white);
 }
 
 .fixed-buttons a:hover {
@@ -1595,47 +1606,32 @@
 }
 
 /* =========================================================
-   MOBILE OPTIMIZATIONS
+   MOBILE FIX (MAIN ISSUE SOLVED HERE)
 ========================================================= */
-
 @media (max-width: 768px) {
-  .fixed-showcase {
-    min-height: 100vh;
-    background-attachment: scroll;           /* Important for mobile */
-    background-position: center 30%;         /* Adjust focal point */
-    padding: 100px 20px 80px;
+    .fixed-showcase{
+        background:var(--black);
+    }
+  .bg-image {
+    background-size: contain;        /* KEY FIX */
+    background-position: top center;
   }
 
-  /* Optional: Slightly darken overlay for better text readability on mobile */
-  .fixed-showcase::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: rgba(5, 29, 73, 0.45);       /* Deep blue overlay */
-    z-index: 1;
-  }
-
-  .fixed-glow-1,
-  .fixed-glow-2 {
-    display: none;                           /* Hide heavy glows on mobile for performance */
-  }
-
-  .fixed-content {
-    z-index: 2;
+  .fixed-glow {
+    display: none;
   }
 
   .fixed-content h2 {
-    font-size: 2.8rem;
+    font-size: 2.3rem;
   }
 
   .fixed-content p {
-    font-size: 1.05rem;
-    line-height: 1.85;
+    font-size: 1rem;
+    line-height: 1.7;
   }
 
   .fixed-buttons {
     flex-direction: column;
-    gap: 16px;
   }
 
   .fixed-buttons a {
@@ -1644,11 +1640,11 @@
   }
 }
 
-/* Extra small devices */
+/* EXTRA SMALL */
 @media (max-width: 480px) {
-  .fixed-showcase {
-    background-position: center 35%;         /* Fine-tune image focus */
-    padding: 90px 16px 70px;
+  .bg-image {
+    background-size: 100% auto;
+    background-position: top center;
   }
 }
 /* =========================================================
