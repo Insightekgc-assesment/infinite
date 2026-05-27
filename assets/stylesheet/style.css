@@ -1647,29 +1647,27 @@
     background-position: top center;
   }
 }
+
 /* =========================================================
    WHO WE SPOTLIGHT SECTION
 ========================================================= */
 
-.spotlight-section{
+/* =========================================================
+   WHO WE SPOTLIGHT SECTION
+========================================================= */
+
+.spotlight-section {
   position: relative;
   overflow: hidden;
-
   padding: 130px 0;
-
-  background:
-    linear-gradient(
-      135deg,
-      #020817 0%,
-      #07152d 100%
-    );
+  background: var(--white);
 }
 
 /* =========================================================
    CONTAINER
 ========================================================= */
 
-.spotlight-container{
+.spotlight-container {
   width: min(1200px, 92%);
   margin: auto;
 }
@@ -1678,195 +1676,127 @@
    TOP AREA
 ========================================================= */
 
-.spotlight-top{
+.spotlight-top {
   max-width: 850px;
-
   margin-bottom: 80px;
 }
 
-/* SMALL TAG */
-.spotlight-tag{
+/* TAG */
+.spotlight-tag {
   display: inline-block;
-
-  padding: 10px 18px;
-
+  padding: 10px 20px;
   border-radius: 100px;
-
-  background: rgba(255,255,255,0.06);
-
-  border: 1px solid rgba(255,255,255,0.08);
-
-  color: rgba(255,255,255,0.8);
-
+  background: rgba(5, 29, 73, 0.08);
+  border: 1px solid rgba(5, 29, 73, 0.12);
+  color: var(--primary);
   font-size: 13px;
   font-weight: 700;
-  letter-spacing: 1.5px;
-
+  letter-spacing: 1.8px;
   margin-bottom: 28px;
 }
 
 /* MAIN HEADING */
-.spotlight-top h2{
-  font-size: clamp(3rem, 6vw, 6rem);
-
-  line-height: 1.02;
-
+.spotlight-top h2 {
+  font-size: clamp(3rem, 6vw, 5.8rem);
+  line-height: 1.05;
   font-weight: 800;
-
-  color: var(--white);
-
-  margin-bottom: 30px;
+  color: var(--black);
+  margin-bottom: 32px;
 }
 
-/* LIGHT BLUE ACCENT */
-.spotlight-top h2 span{
-  display: block;
-
-  color: #8bb8ff;
+.spotlight-top h2 span {
+  color: var(--primary);
 }
 
 /* DESCRIPTION */
-.spotlight-top p{
+.spotlight-top p {
   max-width: 700px;
-
-  color: rgba(255,255,255,0.72);
-
+  color: #555;
   font-size: 1.08rem;
-
-  line-height: 2;
+  line-height: 1.95;
 }
 
 /* =========================================================
    GRID
 ========================================================= */
 
-.spotlight-grid{
+.spotlight-grid {
   display: grid;
-
   grid-template-columns: repeat(3, 1fr);
-
-  gap: 24px;
+  gap: 28px;
 }
 
 /* =========================================================
    CARD
 ========================================================= */
 
-.spotlight-card{
+.spotlight-card {
   position: relative;
-
-  padding: 38px;
-
+  padding: 40px 36px;
   border-radius: 28px;
-
-  background:
-    linear-gradient(
-      180deg,
-      rgba(255,255,255,0.08),
-      rgba(255,255,255,0.03)
-    );
-
+  background: linear-gradient(145deg, #0A2540, #051D49);
   border: 1px solid rgba(255,255,255,0.08);
-
-  backdrop-filter: blur(16px);
-
-  min-height: 280px;
-
-  transition: 0.4s ease;
-
+  min-height: 300px;
+  transition: all 0.45s ease;
   overflow: hidden;
+  color: white;
 }
 
-/* HOVER EFFECT */
-.spotlight-card:hover{
-  transform: translateY(-10px);
-
+.spotlight-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 25px 50px rgba(5, 29, 73, 0.25);
   border-color: rgba(255,255,255,0.18);
-
-  background:
-    linear-gradient(
-      180deg,
-      rgba(255,255,255,0.10),
-      rgba(255,255,255,0.05)
-    );
 }
 
-/* TOP GLOW */
-.spotlight-card::before{
+/* Top Accent Line */
+.spotlight-card::before {
   content: "";
-
   position: absolute;
-
   top: 0;
   left: 0;
-
   width: 100%;
-  height: 4px;
-
-  background:
-    linear-gradient(
-      90deg,
-      #8bb8ff,
-      transparent
-    );
-
-  opacity: 0;
-
-  transition: 0.4s ease;
+  height: 5px;
+  background: linear-gradient(90deg, #00b4d8, #48cae4);
+  opacity: 0.9;
+  transition: all 0.4s ease;
 }
 
-/* SHOW GLOW ON HOVER */
-.spotlight-card:hover::before{
-  opacity: 1;
+.spotlight-card:hover::before {
+  height: 6px;
 }
 
 /* =========================================================
-   CARD NUMBER
+   CARD CONTENT
 ========================================================= */
 
-.spotlight-number{
-  font-size: 1rem;
-
+.spotlight-number {
+  font-size: 1.05rem;
   font-weight: 700;
-
-  color: rgba(255,255,255,0.35);
-
+  color: rgba(255,255,255,0.75);
   margin-bottom: 24px;
+  letter-spacing: 1px;
 }
 
-/* =========================================================
-   CARD TITLE
-========================================================= */
-
-.spotlight-card h3{
-  font-size: 1.6rem;
-
-  line-height: 1.3;
-
-  color: var(--white);
-
-  margin-bottom: 20px;
+.spotlight-card h3 {
+  font-size: 1.65rem;
+  line-height: 1.35;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 22px;
 }
 
-/* =========================================================
-   CARD TEXT
-========================================================= */
-
-.spotlight-card p{
-  color: rgba(255,255,255,0.72);
-
-  line-height: 1.9;
-
-  font-size: 1rem;
+.spotlight-card p {
+  color: rgba(255,255,255,0.85);
+  line-height: 1.85;
+  font-size: 1.02rem;
 }
 
 /* =========================================================
    LARGE CARD
 ========================================================= */
 
-.spotlight-large{
+.spotlight-large {
   grid-column: span 3;
-
   min-height: auto;
 }
 
@@ -1874,46 +1804,33 @@
    RESPONSIVE
 ========================================================= */
 
-@media (max-width: 991px){
-
-  .spotlight-grid{
+@media (max-width: 991px) {
+  .spotlight-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-
-  .spotlight-large{
+  .spotlight-large {
     grid-column: span 2;
   }
-
-  .spotlight-top{
+  .spotlight-top {
     margin-bottom: 60px;
   }
 }
 
-@media (max-width: 768px){
-
-  .spotlight-section{
+@media (max-width: 768px) {
+  .spotlight-section {
     padding: 100px 0;
   }
-
-  .spotlight-grid{
+  .spotlight-grid {
     grid-template-columns: 1fr;
   }
-
-  .spotlight-large{
+  .spotlight-large {
     grid-column: span 1;
   }
-
-  .spotlight-card{
+  .spotlight-card {
+    padding: 32px 28px;
     min-height: auto;
-
-    padding: 30px 24px;
   }
-
-  .spotlight-top h2{
-    font-size: 2.5rem;
-  }
-
-  .spotlight-card h3{
-    font-size: 1.4rem;
+  .spotlight-top h2 {
+    font-size: 2.6rem;
   }
 }
