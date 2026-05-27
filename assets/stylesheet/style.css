@@ -527,11 +527,11 @@
 
   border-radius: 100px;
 
-  background: rgba(212,175,55,0.12);
+   background: rgba(212, 175, 55, 0.568);
 
   border: 1px solid rgba(212,175,55,0.15);
 
-  color: #D4AF37;
+  color: var(--black);
 
   font-size: 13px;
   font-weight: 700;
@@ -933,5 +933,261 @@
 
   .inner-circle span{
     font-size: 1.2rem;
+  }
+}
+
+
+/* =========================================================
+   VISION SECTION
+========================================================= */
+
+.vision-section{
+  position: relative;
+  overflow: hidden;
+
+  padding: 140px 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #f8f9fc 100%
+    );
+}
+
+/* =========================================================
+   HUGE BACKGROUND TEXT
+========================================================= */
+
+.vision-bg-text{
+  position: absolute;
+
+  top: 40px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  font-size: clamp(5rem, 18vw, 14rem);
+
+  font-weight: 900;
+
+  letter-spacing: 10px;
+
+  color: rgba(5,29,73,0.03);
+
+  user-select: none;
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.vision-container{
+  width: min(1180px, 92%);
+  margin: auto;
+
+  position: relative;
+  z-index: 2;
+}
+
+/* =========================================================
+   WRAPPER
+========================================================= */
+
+.vision-wrapper{
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 80px;
+
+  align-items: center;
+}
+
+/* =========================================================
+   LEFT SIDE
+========================================================= */
+
+.vision-left{
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 30px;
+}
+
+/* GOLDEN VERTICAL LINE */
+.vision-line{
+  width: 4px;
+
+  min-height: 240px;
+
+  border-radius: 100px;
+
+  background: var(--golden);
+}
+
+/* =========================================================
+   BADGE
+========================================================= */
+
+.vision-badge{
+  display: inline-flex;
+  align-items: center;  
+  gap: 10px;
+
+  padding: 10px 18px;
+
+  border-radius: 100px;
+
+  background: rgba(212, 175, 55, 0.568);
+
+  color:var(--black);
+
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+
+  margin-bottom: 28px;
+}
+
+.vision-badge span{
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background:var(--black);
+}
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.vision-left h2{
+  font-size: clamp(2.8rem, 5vw, 5rem);
+
+  line-height: 1.05;
+
+  color: var(--primary);
+
+  font-weight: 800;
+}
+
+.vision-left h2 span{
+  display: block;
+
+  margin-top: 12px;
+
+  background: var(--black);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* =========================================================
+   RIGHT CARD
+========================================================= */
+
+.vision-card{
+  position: relative;
+
+  padding: 50px;
+
+  border-radius: 32px;
+
+  background: rgba(255,255,255,0.75);
+
+  backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(212,175,55,0.12);
+
+  box-shadow:
+    0 25px 60px rgba(5,29,73,0.08);
+}
+
+/* TOP GLOW */
+.vision-card::before{
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 6px;
+
+  border-radius: 20px 20px 0 0;
+
+  background: var(--golden);
+}
+
+/* HIGHLIGHT TEXT */
+.vision-highlight{
+  font-size: 1.25rem;
+
+  line-height: 1.8;
+
+  color: var(--primary);
+
+  font-weight: 600;
+
+  margin-bottom: 28px;
+}
+
+/* PARAGRAPH */
+.vision-card p{
+  color: rgba(0,0,0,0.72);
+
+  font-size: 1.02rem;
+
+  line-height: 1.9;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 991px){
+
+  .vision-wrapper{
+    grid-template-columns: 1fr;
+
+    gap: 60px;
+  }
+
+  .vision-left{
+    flex-direction: column;
+
+    gap: 24px;
+  }
+
+  .vision-line{
+    width: 120px;
+    min-height: 4px;
+  }
+
+  .vision-left h2{
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 768px){
+
+  .vision-section{
+    padding: 100px 0;
+  }
+
+  .vision-card{
+    padding: 35px 25px;
+  }
+
+  .vision-left h2{
+    font-size: 2.2rem;
+  }
+
+  .vision-bg-text{
+    font-size: 5rem;
   }
 }
