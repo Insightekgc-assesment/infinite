@@ -18,6 +18,14 @@
     #FFD700,
     #F5C542
   );
+
+    --gold-solid: #d4af37;
+
+  /* neutral luxury palette */
+  --text: #64748b;
+  --muted: #94a3b8;
+  --bg: #f6f7fb;
+
 }
 
 

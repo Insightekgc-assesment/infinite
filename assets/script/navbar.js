@@ -52,23 +52,28 @@
   }
 
   // Highlight Active Link
-  function highlightActiveLink() {
-    const links = $all(SELECTORS.navLinks);
-    const currentPath = window.location.pathname.replace(/\/$/, '');
+ function highlightActiveLink() {
+  const links = $all(SELECTORS.navLinks);
+  const currentPath = window.location.pathname.split('/').pop();
 
-    links.forEach((a) => {
-      const href = (a.getAttribute('href') || '').replace(/\/$/, '');
+  links.forEach((link) => {
+    const href = (link.getAttribute('href') || '').split('/').pop();
 
-      if (!href || href === '#') return;
+    // reset first
+    link.classList.remove('active');
 
-      const hrefFile = href.split('/').pop();
-      const currentFile = currentPath.split('/').pop();
+    if (href === currentPath) {
+      link.classList.add('active');
 
-      if (href === currentPath || (hrefFile && currentFile && hrefFile === currentFile)) {
-        a.classList.add('active');
+      // ALSO highlight parent dropdown (if exists)
+      const parentDropdown = link.closest('.inf-dropdown');
+      if (parentDropdown) {
+        const parentLink = parentDropdown.querySelector('.inf-dropdown-toggle');
+        if (parentLink) parentLink.classList.add('active');
       }
-    });
-  }
+    }
+  });
+}
 
   // Desktop Dropdown (Hover)
   function initDesktopDropdowns() {
