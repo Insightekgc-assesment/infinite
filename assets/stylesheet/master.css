@@ -19,14 +19,23 @@
     #F5C542
   );
 
-    --gold-solid: #d4af37;
+  --gold-solid: #d4af37;
 
   /* neutral luxury palette */
   --text: #64748b;
   --muted: #94a3b8;
   --bg: #f6f7fb;
 
+  /* shared component vars (needed by leadership page CSS) */
+  --radius: 22px;
+  --radius2: 28px;
+  --shadow: rgba(5, 29, 73, 0.12) 0px 20px 60px;
+  --border: rgba(5, 29, 73, 0.12);
+
+  /* used by some hero text rules */
+  --logo: var(--primary);
 }
+
 
 
 
