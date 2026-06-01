@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "slug": "global-brand-building",
+    "title": "Global Brand Building Strategies",
+    "category": "Visibility",
+    "tags": ["Branding","Growth","Visibility"],
+    "author": "Infinite Icons",
+    "minutes": 8,
+    "date": "2026-05-28",
+    "featured": true,
+    "thumbnail": "/assets/images/BuildingGlobalInfluence.png",
+    "hero": "/assets/images/BuildingGlobalInfluence.png",
+    "excerpt": "Strategies modern companies use for international visibility.",
+    "seoTitle": "Global Brand Building Strategies | Infinite Icons",
+    "seoDescription": "Learn practical strategies for scaling brand visibility internationally.",
+    "content": "<h2>Introduction</h2><p>Global brand building requires consistency, cultural fluency, and disciplined execution. This article breaks down practical strategies that help teams expand with confidence.</p><h2>Designing a Global Position</h2><p>Start with a clear value proposition and translate it into messaging that resonates locally.</p><h2>Distribution That Scales</h2><p>Map the customer journey across regions and invest in content and partnerships.</p><h2>Measurement & Iteration</h2><p>Track brand lift and engagement quality to refine positioning.</p>"
+  },
+  {
+    "id": 2,
+    "slug": "future-ready-leadership",
+    "title": "Future Ready Leadership",
+    "category": "Leadership",
+    "tags": ["Leadership","Strategy"],
+    "author": "Editorial Team",
+    "minutes": 6,
+    "date": "2026-05-25",
+    "featured": false,
+    "thumbnail": "/assets/images/ScalingLeadership.png",
+    "hero": "/assets/images/ScalingLeadership.png",
+    "excerpt": "Leadership systems for modern organizations.",
+    "seoTitle": "Future Ready Leadership | Infinite Icons",
+    "seoDescription": "Discover leadership systems built for modern organizations.",
+    "content": "<h2>Leadership in Uncertain Times</h2><p>Future-ready leaders build clarity and resilience.</p><h2>From Vision to Operating Rhythm</h2><p>Translate strategy into repeatable routines.</p><h2>Decision-Making Under Pressure</h2><p>Create measurable goals and transparent tradeoffs.</p><h2>Culture as a Multiplying Force</h2><p>Empower teams with trust and autonomy.</p>"
+  }
+
+]
