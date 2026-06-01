@@ -1,13 +1,9 @@
-# TODO - Fix leadership page (Infinite Icons)
-
-- [x] 1) Replace conflicting leadership CSS block(s) in `assets/stylesheet/style.css` with a single consistent implementation that matches `leadership.html` classes.
-
-  - Ensure `.grain`, `.reveal` and IntersectionObserver work.
-  - Define missing classes: `.hero-side`, `.stat`, `.vision-block`, `.quote-card`, `.quote`, `.quote-footer`, `.checklist`, `.check`, `.btn-row`, `.cat`, `.emoji`, `.name`, `.sub`.
-  - Fix luxury theme: `.hero-wrap` and cards must not be plain white.
-  - Ensure variables come from `assets/stylesheet/master.css` (no need to duplicate).
-
-- [ ] 2) Verify `leadership.html` has only one `#footer-placeholder` and that grain markup exists.
-- [ ] 3) Ensure navbar/footer fetch paths work in the deployed context (keep relative `components/*`).
-- [ ] 4) Manual check: open `leadership.html` and scroll to confirm `.reveal` animations trigger.
-
+- [ ] Inspect current navbar.js/css/script.js integration for dynamic loading timing
+- [ ] Rebuild navbar.js logic to guarantee single init after component injection
+- [ ] Ensure mobile hamburger open/close + aria-expanded correct
+- [ ] Ensure overlay/close/esc/menu-link click closes sidebar and prevents body scroll
+- [ ] Implement mobile dropdown using classes (no inline style), with only-one-open behavior + chevron rotate
+- [ ] Preserve desktop dropdown behavior (hover + no flicker)
+- [ ] Improve active link detection for nested pages
+- [ ] Verify no duplicate event listeners
+- [ ] Provide final complete files: navbar.js (full), navbar.css (only if needed), script.js modifications (if needed)
