@@ -31,9 +31,6 @@
   --radius2: 28px;
   --shadow: rgba(5, 29, 73, 0.12) 0px 20px 60px;
   --border: rgba(5, 29, 73, 0.12);
-
-  /* used by some hero text rules */
-  --logo: var(--primary);
 }
 
 

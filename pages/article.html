@@ -1,51 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Infinite Icons - Article</title>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-<link rel="stylesheet" href="/assets/stylesheet/style.css" />
-<link rel="stylesheet" href="/assets/stylesheet/master.css" />
-<link rel="stylesheet" href="/assets/stylesheet/navbar.css" />
-<link rel="stylesheet" href="/assets/stylesheet/footer.css" />
-<link rel="stylesheet" href="article-styles.css" /> <!-- Separate CSS file -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Infinite Icons</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="../assets/stylesheet/style.css">
+  <link rel="stylesheet" href="../assets/stylesheet/master.css">
+  <link rel="stylesheet" href="../assets/stylesheet/navbar.css">
+  <link rel="stylesheet" href="../assets/stylesheet/footer.css">
+  <link rel="stylesheet" href="../assets/stylesheet/spa.css">
+
+
+  <!-- Tailwind CSS (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body>
-<div id="navbar-placeholder"></div>
-<main>
-<section class="vision-section" style="padding-bottom: 0">
-<div class="container">
-<div class="article-nav" id="articleNav" aria-live="polite"></div>
-<div class="article-hero" id="articleHero" aria-live="polite"></div>
-</div>
-</section>
-<section class="article-section" style="padding-bottom: 80px">
-<div class="container" style="max-width: 980px">
-<div id="articleContent" class="article-content"></div>
-<div id="continueWrap" style="display:none" class="continue-wrap mt-5">
-<h3 style="color: var(--primary); font-weight: 900; margin: 0">Continue Reading</h3>
-<div class="related-scroll" style="overflow-x:auto; padding-bottom: 8px">
-<div class="row g-4 flex-nowrap" id="continueGrid" style="min-width: max-content"></div>
-</div>
-</div>
-<div id="relatedWrap" class="related-wrap" style="display: none">
-<div class="mt-5">
-<h3 class="mb-3" style="color: var(--primary); font-weight: 900">Related Articles</h3>
-<div class="row g-4" id="relatedGrid"></div>
-</div>
-</div>
-<div id="articleError" class="article-error" style="display: none"></div>
-</div>
-</section>
-</main>
-<div id="footer-placeholder"></div>
-<script src="/assets/script/navbar.js" defer></script>
-<script src="/assets/script/footer.js" defer></script>
-<script src="/assets/script/script.js" defer></script>
-<script src="/assets/script/article.js" defer></script>
-<script src="article.js"></script>
-<script src="article-scripts.js"></script> <!-- Separate JS file -->
+  <div id="navbar-placeholder"></div>
+
+  <header class="site-header ">
+    <div class="container"><br><br>
+      <h1 data-aos="fade-right" data-aos-delay="300">Founder Stories</h1>
+      <p class="subtitle" data-aos="fade-up" data-aos-delay="500">Premium interviews and founder journeys from the startup world.</p>
+    </div>
+  </header>
+
+  <main class="container-fluid page-shell">
+    <section class="hero-slate founder-slate">
+      <div class="hero-copy" data-aos="fade-right">
+        <p class="eyebrow">Founder Interviews</p>
+        <h2>Founder stories from the builders shaping tomorrow's startups.</h2>
+        <p class="hero-text">A premium platform for leadership journeys, startup interviews, and deeply human founder profiles that feel cinematic and authentic.</p>
+        <div class="hero-metrics">
+          <div class="hero-metric">
+            <strong>30</strong>
+            <span>Founder stories</span>
+          </div>
+          <div class="hero-metric">
+            <strong>10+</strong>
+            <span>Startup categories</span>
+          </div>
+          <div class="hero-metric">
+            <strong>Leadership</strong>
+            <span>Moments</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual" data-aos="fade-left">
+        <div class="hero-showcase hero-founder-showcase">
+          <img id="heroImage" src="articleImage/Ashten Barber.png" alt="Featured founder profile image">
+          <div class="hero-overlay"></div>
+          <div class="hero-copy-block">
+          <span id="heroCategory" class="story-category">Founder Interview</span>
+            <h3 id="heroHeading">A founding story that rewrites the startup playbook.</h3>
+            <p id="heroPreview">Go inside the journey of a leader forging a new category in a fast-moving market, told through vision, persistence, and leadership.</p>
+            <div class="hero-founder-meta">
+              <span id="heroFounderName" class="founder-name">Ava Clarke</span>
+              <span id="heroFounderRole" class="founder-role"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured-collection">
+      <div class="collection-header">
+        <p class="eyebrow">Founder spotlight</p>
+        <h2 class="collection-title">Discover the next generation of startup leaders.</h2>
+        <p class="collection-copy">Explore an editorial roster of founders, leadership journeys, and intimate profile stories crafted for the modern entrepreneur.</p>
+      </div>
+
+      <div id="cardGrid" class="editorial-grid"></div>
+
+      <nav aria-label="Card pagination" class="pagination-shell">
+        <ul id="paginationNav" class="pagination justify-content-center flex-wrap"></ul>
+      </nav>
+    </section>
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <!-- =========================================================
+       AOS CSS
+  ========================================================= -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+
+  <!-- =========================================================
+       YOUR CUSTOM SCRIPTS
+  ========================================================= -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="../assets/script/spa.js" defer></script>
+  <script src="../assets/script/navbar.js" defer></script>
+  <script src="../assets/script/footer.js" defer></script>
+  <script src="../assets/script/script.js" defer></script>
+
+
+  <!-- =========================================================
+       BOOTSTRAP (single import)
+  ========================================================= -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- =========================================================
+       AOS LIBRARY (single import)
+  ========================================================= -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
 </body>
+
 </html>
+

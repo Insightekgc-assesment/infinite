@@ -404,47 +404,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
-    <script>
-      async function loadComponent(url, placeholderId) {
-        try {
-          const response = await fetch(url);
-          if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-          const html = await response.text();
-          const placeholder = document.getElementById(placeholderId);
-          if (placeholder) {
-            placeholder.innerHTML = html;
-            if (window.AOS) AOS.refresh();
-          }
-        } catch (err) {
-          console.error('Error loading component:', err);
-        }
-      }
-
-      window.addEventListener('DOMContentLoaded', () => {
-        loadComponent('/components/navbar.html', 'navbar-placeholder');
-        loadComponent('/components/footer.html', 'footer-placeholder');
-
-        if (window.AOS) {
-          AOS.init({
-            duration: 1000,
-            easing: 'ease-out-cubic',
-            once: true,
-            mirror: false,
-            offset: 120,
-            delay: 0,
-            throttleDelay: 99,
-            debounceDelay: 50,
-            disable: function () {
-              return window.innerWidth < 768;
-            },
-          });
-        }
-      });
-
-      window.addEventListener('load', () => {
-        if (window.AOS) AOS.refreshHard();
-      });
-    </script>
+  
   </body>
 </html>
 

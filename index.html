@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="assets/stylesheet/master.css">
   <link rel="stylesheet" href="assets/stylesheet/navbar.css">
   <link rel="stylesheet" href="assets/stylesheet/footer.css">
+  <link rel="stylesheet" href="assets/stylesheet/spa.css">
 
   <!-- Tailwind CSS (CDN) -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -985,6 +986,8 @@ href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
 <!-- =========================================================
      YOUR CUSTOM SCRIPTS
 ========================================================= -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="assets/script/spa.js" defer></script>
 <script src="assets/script/navbar.js" defer></script>
 <script src="assets/script/footer.js" defer></script>
 <script src="assets/script/script.js" defer></script>
@@ -999,137 +1002,7 @@ href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
 ========================================================= -->
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
-<!-- =========================================================
-     MAIN INITIALIZATION
-========================================================= -->
-<script>
 
-  /* =========================================================
-     LOAD COMPONENTS FUNCTION
-  ========================================================= */
-
-  async function loadComponent(url, placeholderId, callback) {
-
-    try {
-
-      const response = await fetch(url);
-
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-
-      const html = await response.text();
-
-      const placeholder = document.getElementById(placeholderId);
-
-      if (placeholder) {
-
-        placeholder.innerHTML = html;
-
-        /* ================================================
-           REFRESH AOS AFTER DYNAMIC CONTENT LOAD
-        ================================================ */
-
-        if (window.AOS) {
-          AOS.refresh();
-        }
-
-        /* ================================================
-           OPTIONAL CALLBACK
-        ================================================ */
-
-        if (callback) {
-          callback();
-        }
-      }
-
-    } catch (err) {
-
-      console.error('Error loading component:', err);
-
-    }
-  }
-
-  /* =========================================================
-     DOM READY
-  ========================================================= */
-
-  window.addEventListener('DOMContentLoaded', () => {
-
-    /* =====================================================
-       LOAD NAVBAR
-    ===================================================== */
-
-    loadComponent(
-      'components/navbar.html',
-      'navbar-placeholder'
-    );
-
-    /* =====================================================
-       LOAD FOOTER
-    ===================================================== */
-
-    loadComponent(
-      'components/footer.html',
-      'footer-placeholder'
-    );
-
-    /* =====================================================
-       INITIALIZE AOS
-    ===================================================== */
-
-    if (window.AOS) {
-
-      AOS.init({
-
-        /* ================================================
-           GLOBAL ANIMATION SETTINGS
-        ================================================ */
-
-        duration: 1000,
-
-        easing: 'ease-out-cubic',
-
-        once: true,
-
-        mirror: false,
-
-        offset: 120,
-
-        delay: 0,
-
-        /* ================================================
-           PERFORMANCE OPTIMIZATION
-        ================================================ */
-
-        disable: function () {
-
-          return window.innerWidth < 768;
-
-        }
-
-      });
-
-    }
-
-  });
-
-  /* =========================================================
-     OPTIONAL:
-     REFRESH AOS AFTER FULL PAGE LOAD
-  ========================================================= */
-
-  window.addEventListener('load', () => {
-
-    if (window.AOS) {
-
-      AOS.refreshHard();
-
-    }
-
-  });
-
-</script>
 </body>
 
 </html>

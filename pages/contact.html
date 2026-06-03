@@ -26,44 +26,216 @@
   <body>
     <div id="navbar-placeholder"></div>
 
-    <main>
-      <section class="vision-section" data-aos="fade-up" data-aos-duration="1200">
-        <h1 class="vision-bg-text" data-aos="zoom-in" data-aos-duration="1800" data-aos-delay="100">
-          CONTACT
-        </h1>
+    <!-- Main Content Container -->
+    <main class="flex-grow py-16 px-4 sm:px-6 lg:px-8 space-y-24">
+      
+      <!-- SECTION 1: HERO & CORE CONTACT FORM GRID -->
+      <section 
+        class="max-w-6xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden grid grid-cols-1 md:grid-cols-12"
+        data-aos="fade-up" 
+        data-aos-duration="1000"
+      >
+        <!-- Left Column: Contact Information -->
+        <div class="md:col-span-5 bg-slate-900 text-white p-8 md:p-12 flex flex-col justify-between relative overflow-hidden">
+          <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-indigo-600 rounded-full blur-2xl opacity-40"></div>
+          <div class="absolute -left-10 -top-10 w-32 h-32 bg-purple-600 rounded-full blur-2xl opacity-30"></div>
 
-        <div class="vision-container">
-          <div class="vision-wrapper">
-            <div class="vision-left" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
-              <div class="vision-line" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="250"></div>
+          <div class="relative z-10">
+            <h1 class="text-3xl font-extrabold tracking-tight mb-2">Get in Touch</h1>
+            <p class="text-slate-400 text-sm mb-10">Have questions about Infinite Icons? Drop us a message, and our team will get back to you within 24 hours.</p>
 
-              <div>
-                <div class="vision-badge" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="300">
-                  <span></span>
-                  GET IN TOUCH
+            <!-- Info Items -->
+            <div class="space-y-6">
+              <div class="flex items-start space-x-4">
+                <div class="flex items-center justify-center w-10 h-10 rounded-lg bg-slate-800 text-indigo-400 text-lg shrink-0">
+                  <i class="bi bi-envelope-fill"></i>
                 </div>
+                <div>
+                  <h3 class="text-sm font-semibold text-slate-300">Email Us</h3>
+                  <a href="mailto:hello@infiniteicons.com" class="text-white hover:text-indigo-400 transition-colors text-sm">hello@infiniteicons.com</a>
+                </div>
+              </div>
 
-                <h2 data-aos="zoom-in-up" data-aos-duration="1300" data-aos-delay="400">
-                  Let’s Connect
-                  <span>Start a Conversation</span>
-                </h2>
+              <div class="flex items-start space-x-4">
+                <div class="flex items-center justify-center w-10 h-10 rounded-lg bg-slate-800 text-indigo-400 text-lg shrink-0">
+                  <i class="bi bi-telephone-fill"></i>
+                </div>
+                <div>
+                  <h3 class="text-sm font-semibold text-slate-300">Call Us</h3>
+                  <a href="tel:+1234567890" class="text-white hover:text-indigo-400 transition-colors text-sm">+1 (234) 567-890</a>
+                  <p class="text-xs text-slate-500 mt-0.5">Mon-Fri, 9am - 6pm PST</p>
+                </div>
+              </div>
+
+              <div class="flex items-start space-x-4">
+                <div class="flex items-center justify-center w-10 h-10 rounded-lg bg-slate-800 text-indigo-400 text-lg shrink-0">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <div>
+                  <h3 class="text-sm font-semibold text-slate-300">HQ Office</h3>
+                  <p class="text-slate-400 text-sm leading-relaxed">101 Design Innovation Way,<br>Suite 404, San Francisco, CA</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social Media Icons -->
+          <div class="relative z-10 mt-12 md:mt-0 pt-6 border-t border-slate-800 flex space-x-4 text-xl">
+            <a href="#" class="text-slate-400 hover:text-white transition-colors" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="text-slate-400 hover:text-white transition-colors" aria-label="GitHub"><i class="bi bi-github"></i></a>
+            <a href="#" class="text-slate-400 hover:text-white transition-colors" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="text-slate-400 hover:text-white transition-colors" aria-label="Dribbble"><i class="bi bi-dribbble"></i></a>
+          </div>
+        </div>
+
+        <!-- Right Column: Contact Form -->
+        <div class="md:col-span-7 p-8 md:p-12">
+          <form action="#" method="POST" class="space-y-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div>
+                <label for="first-name" class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">First Name</label>
+                <input type="text" id="first-name" name="first-name" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-indigo-500 focus:bg-white transition-all text-sm" placeholder="Jane" />
+              </div>
+              <div>
+                <label for="last-name" class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">Last Name</label>
+                <input type="text" id="last-name" name="last-name" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-indigo-500 focus:bg-white transition-all text-sm" placeholder="Doe" />
               </div>
             </div>
 
-            <div class="vision-card" data-aos="zoom-in" data-aos-duration="1400" data-aos-delay="350">
-              <p class="vision-highlight" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="450">
-                Reach out to Infinite Icons for partnerships, media, events, and ecosystem collaborations.
-              </p>
-
-              <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
-                Email: <strong>hello@infiniteicons.com</strong>
-                <br />
-                Phone: <strong>+91 98765 43210</strong>
-              </p>
+            <div>
+              <label for="email" class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">Email Address</label>
+              <input type="email" id="email" name="email" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-indigo-500 focus:bg-white transition-all text-sm" placeholder="jane.doe@example.com" />
             </div>
+
+            <div>
+              <label for="subject" class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">Subject</label>
+              <select id="subject" name="subject" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-indigo-500 focus:bg-white transition-all text-sm appearance-none">
+                <option value="general">General Inquiry</option>
+                <option value="support">Technical Support / Bug Report</option>
+                <option value="billing">Commercial Licensing & Enterprise</option>
+                <option value="partnership">Custom Icon Design Requests</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="message" class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">Message</label>
+              <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-indigo-500 focus:bg-white transition-all text-sm resize-none" placeholder="Tell us how we can help you..."></textarea>
+            </div>
+
+            <div>
+              <button type="submit" class="w-full sm:w-auto px-8 py-3.5 bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-800 text-white font-medium rounded-xl shadow-lg shadow-indigo-600/20 transition-all text-sm flex items-center justify-center space-x-2 cursor-pointer">
+                <span>Send Message</span>
+                <i class="bi bi-send-fill text-xs"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- SECTION 2: SPECIFIC CHANNELS (CARDS) -->
+      <section class="max-w-6xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+        <div class="text-center mb-10">
+          <h2 class="text-2xl font-bold tracking-tight text-slate-900">Looking for something specific?</h2>
+          <p class="text-slate-500 text-sm mt-2">Skip the contact form queue by reaching directly to our designated teams.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Card 1 -->
+          <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+            <div class="text-indigo-600 text-xl mb-3"><i class="bi bi-megaphone"></i></div>
+            <h3 class="font-semibold text-slate-900 mb-1 text-base">Press & Media</h3>
+            <p class="text-slate-500 text-xs mb-4 leading-relaxed">Download our brand kit, asset designs, or reach out for media statements and interviews.</p>
+            <a href="mailto:press@infiniteicons.com" class="text-xs font-medium text-indigo-600 hover:text-indigo-700">press@infiniteicons.com &rarr;</a>
+          </div>
+          <!-- Card 2 -->
+          <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+            <div class="text-indigo-600 text-xl mb-3"><i class="bi bi-briefcase"></i></div>
+            <h3 class="font-semibold text-slate-900 mb-1 text-base">Careers & Talent</h3>
+            <p class="text-slate-500 text-xs mb-4 leading-relaxed">Want to design the future of visual icons? Check open positions or submit an open portfolio application.</p>
+            <a href="/careers" class="text-xs font-medium text-indigo-600 hover:text-indigo-700">View Open Positions &rarr;</a>
+          </div>
+          <!-- Card 3 -->
+          <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+            <div class="text-indigo-600 text-xl mb-3"><i class="bi bi-shield-check"></i></div>
+            <h3 class="font-semibold text-slate-900 mb-1 text-base">Legal & Licensing</h3>
+            <p class="text-slate-500 text-xs mb-4 leading-relaxed">Inquiries regarding extensive commercial redistribution, digital redistribution rights, or copyright questions.</p>
+            <a href="mailto:legal@infiniteicons.com" class="text-xs font-medium text-indigo-600 hover:text-indigo-700">legal@infiniteicons.com &rarr;</a>
           </div>
         </div>
       </section>
+
+      <!-- SECTION 3: FAQ ACCORDION -->
+      <section class="max-w-4xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold tracking-tight text-slate-900">Frequently Asked Questions</h2>
+          <p class="text-slate-500 text-sm mt-2">Get instant answers to the questions we get asked most frequently.</p>
+        </div>
+
+        <div class="space-y-4">
+          <!-- FAQ Item 1 -->
+          <details class="group bg-white rounded-xl border border-slate-200 p-5 [&_summary::-webkit-details-marker]:hidden cursor-pointer" open>
+            <summary class="flex items-center justify-between font-medium text-slate-900 list-none text-sm">
+              <span>Can I use Infinite Icons in commercial end products?</span>
+              <span class="transition group-open:rotate-180 text-xs text-slate-400">
+                <i class="bi bi-chevron-down"></i>
+              </span>
+            </summary>
+            <p class="mt-3 text-xs leading-relaxed text-slate-500 border-t border-slate-100 pt-3">
+              Absolutely! All icons downloaded under our standard license can be used in personal and commercial web designs, print elements, software, applications, and marketing materials without mandatory attribution. 
+            </p>
+          </details>
+
+          <!-- FAQ Item 2 -->
+          <details class="group bg-white rounded-xl border border-slate-200 p-5 [&_summary::-webkit-details-marker]:hidden cursor-pointer">
+            <summary class="flex items-center justify-between font-medium text-slate-900 list-none text-sm">
+              <span>Do you accept requests for custom icon sets?</span>
+              <span class="transition group-open:rotate-180 text-xs text-slate-400">
+                <i class="bi bi-chevron-down"></i>
+              </span>
+            </summary>
+            <p class="mt-3 text-xs leading-relaxed text-slate-500 border-t border-slate-100 pt-3">
+              Yes, our specialized design team crafts tailored vectors for brands. Select "Custom Icon Design Requests" in the contact form dropdown menu above, and detail your project timeline and preferred guidelines.
+            </p>
+          </details>
+
+          <!-- FAQ Item 3 -->
+          <details class="group bg-white rounded-xl border border-slate-200 p-5 [&_summary::-webkit-details-marker]:hidden cursor-pointer">
+            <summary class="flex items-center justify-between font-medium text-slate-900 list-none text-sm">
+              <span>What file formats are provided upon download?</span>
+              <span class="transition group-open:rotate-180 text-xs text-slate-400">
+                <i class="bi bi-chevron-down"></i>
+              </span>
+            </summary>
+            <p class="mt-3 text-xs leading-relaxed text-slate-500 border-t border-slate-100 pt-3">
+              We provide clean, fully scalable native SVGs, optimized React components, icon fonts (WOFF2), and raw high-res PNG formats for developers and design system managers alike.
+            </p>
+          </details>
+        </div>
+      </section>
+
+      <!-- SECTION 4: GLOBAL LOCATIONS -->
+      <section class="max-w-6xl mx-auto" data-aos="fade-up" data-aos-delay="300">
+        <div class="text-center mb-10">
+          <h2 class="text-2xl font-bold tracking-tight text-slate-900">Our Global Footprint</h2>
+          <p class="text-slate-500 text-sm mt-2">While we work heavily in digital spaces, you can find us distributed around these regional nodes.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="space-y-2">
+            <h4 class="font-semibold text-slate-900 text-sm">San Francisco (HQ)</h4>
+            <p class="text-xs text-slate-500 leading-relaxed">101 Design Innovation Way, Suite 404<br>San Francisco, CA 94103<br><span class="text-indigo-600">sf@infiniteicons.com</span></p>
+          </div>
+          <div class="space-y-2">
+            <h4 class="font-semibold text-slate-900 text-sm">London Hub</h4>
+            <p class="text-xs text-slate-500 leading-relaxed">24 Creative Quarter, Shoreditch High St<br>London, E1 6JE, United Kingdom<br><span class="text-indigo-600">uk@infiniteicons.com</span></p>
+          </div>
+          <div class="space-y-2">
+            <h4 class="font-semibold text-slate-900 text-sm">Tokyo Studio</h4>
+            <p class="text-xs text-slate-500 leading-relaxed">Chome-5-1 Shibuya, Shibuya City<br>Tokyo 150-0002, Japan<br><span class="text-indigo-600">tokyo@infiniteicons.com</span></p>
+          </div>
+        </div>
+      </section>
+
     </main>
 
     <div id="footer-placeholder"></div>
@@ -77,47 +249,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
-    <script>
-      async function loadComponent(url, placeholderId) {
-        try {
-          const response = await fetch(url);
-          if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-          const html = await response.text();
-          const placeholder = document.getElementById(placeholderId);
-          if (placeholder) {
-            placeholder.innerHTML = html;
-            if (window.AOS) AOS.refresh();
-          }
-        } catch (err) {
-          console.error('Error loading component:', err);
-        }
-      }
-
-      window.addEventListener('DOMContentLoaded', () => {
-        loadComponent('/components/navbar.html', 'navbar-placeholder');
-        loadComponent('/components/footer.html', 'footer-placeholder');
-
-        if (window.AOS) {
-          AOS.init({
-            duration: 1000,
-            easing: 'ease-out-cubic',
-            once: true,
-            mirror: false,
-            offset: 120,
-            delay: 0,
-            throttleDelay: 99,
-            debounceDelay: 50,
-            disable: function () {
-              return window.innerWidth < 768;
-            },
-          });
-        }
-      });
-
-      window.addEventListener('load', () => {
-        if (window.AOS) AOS.refreshHard();
-      });
-    </script>
   </body>
 </html>
 
