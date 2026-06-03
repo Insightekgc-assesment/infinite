@@ -4292,6 +4292,37 @@ a {
     padding: 3rem 0 1.75rem;
   }
 
+  /* =========================================================
+     Editorial grid: stable single-column stack on mobile
+  ========================================================= */
+  .editorial-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .story-card {
+    grid-column: auto !important;
+    min-height: auto;
+  }
+
+  /* remove any span-based overrides from tablet styles */
+  .story-card-featured,
+  .story-card-aside,
+  .story-card-wide,
+  .story-card-medium,
+  .story-card-small {
+    grid-column: auto !important;
+  }
+
+  /* Visibility safety: ensure cards and content are not accidentally hidden */
+  .story-card,
+  .story-card * {
+    visibility: visible !important;
+    opacity: 1 !important;
+    display: block;
+  }
+
+
+
   .hero-copy h2 {
     font-size: clamp(2.4rem, 7vw, 3.6rem);
   }
