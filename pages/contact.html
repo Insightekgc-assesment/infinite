@@ -1,6 +1,211 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <style>
+      /* =========================================================
+         Contact page premium responsiveness (no JS/structure changes)
+      ========================================================= */
+      :root{
+        --ci-bg:#f6f7fb;
+        --ci-card:#ffffff;
+        --ci-border:rgba(15,23,42,0.12);
+        --ci-soft:rgba(15,23,42,0.08);
+        --ci-ink:#0f172a;
+        --ci-muted:#64748b;
+        --ci-indigo:#4f46e5;
+      }
+
+      main.contact-main{
+        position: relative;
+        isolation: isolate;
+      }
+      main.contact-main::before{
+        content:"";
+        position:absolute;
+        inset:-20px;
+        background:
+          radial-gradient(circle at 15% 10%, rgba(99,102,241,0.18), transparent 42%),
+          radial-gradient(circle at 90% 15%, rgba(124,58,237,0.12), transparent 40%),
+          radial-gradient(circle at 40% 80%, rgba(99,102,241,0.10), transparent 46%);
+        z-index:-1;
+        pointer-events:none;
+      }
+
+      /* Hero spacing + stacking order */
+      .contact-hero{
+        box-shadow: 0 25px 70px rgba(5,29,73,0.12);
+        border: 1px solid rgba(5,29,73,0.06);
+      }
+      .contact-hero-left{
+        border-radius: 0;
+      }
+
+      /* Premium magazine padding */
+      .contact-hero-left{
+        padding: 1.5rem;
+      }
+      .contact-hero-right{
+        padding: 1.5rem;
+      }
+
+      @media (min-width: 768px){
+        .contact-hero-left{ padding: 2.5rem; }
+        .contact-hero-right{ padding: 2.5rem; }
+      }
+
+      /* Text scale */
+      .contact-hero-title{ 
+        font-size: 1.5rem; /* mobile: text-2xl */
+      }
+      @media (min-width: 768px){
+        .contact-hero-title{
+          font-size: 2.25rem; /* tablet: text-3xl */
+        }
+      }
+      @media (min-width: 1025px){
+        .contact-hero-title{
+          font-size: 2.9rem; /* desktop: text-4xl */
+        }
+      }
+
+      .contact-hero-desc{
+        line-height: 1.75;
+        color: rgba(148,163,184,0.95);
+      }
+
+      .contact-info-item-title{
+        line-height: 1.2;
+      }
+
+      .contact-info-item-link{
+        line-height: 1.6;
+      }
+
+      /* Stack order: info first */
+      @media (max-width: 767.98px){
+        .contact-hero{
+          grid-template-columns: 1fr;
+        }
+        .contact-info-block{ order: 1; }
+        .contact-form-block{ order: 2; }
+      }
+
+      /* Contact form controls */
+      .contact-input,
+      .contact-select,
+      .contact-textarea{
+        box-shadow:
+          0 1px 0 rgba(15,23,42,0.03),
+          0 10px 30px rgba(15,23,42,0.04);
+        transition:
+          box-shadow .25s ease,
+          border-color .25s ease,
+          transform .15s ease,
+          background .25s ease;
+      }
+      .contact-input:focus,
+      .contact-select:focus,
+      .contact-textarea:focus{
+        outline: none;
+        box-shadow:
+          0 1px 0 rgba(15,23,42,0.03),
+          0 18px 48px rgba(79,70,229,0.18);
+        border-color: rgba(99,102,241,0.55);
+        background: #ffffff;
+        transform: translateY(-1px);
+      }
+      .contact-textarea{
+        min-height: 140px;
+      }
+
+      /* Button premium gradient + animation */
+      .contact-submit-btn{
+        background: linear-gradient(135deg, #4f46e5, #7c3aed, #4f46e5);
+        background-size: 180% 180%;
+        transition: transform .2s ease, box-shadow .25s ease, filter .25s ease, background-position .6s ease;
+        box-shadow: 0 18px 40px rgba(79,70,229,0.18);
+      }
+      .contact-submit-btn:hover{
+        transform: translateY(-2px) scale(1.02);
+        filter: saturate(1.04) brightness(1.02);
+        background-position: 100% 0%;
+        box-shadow: 0 24px 55px rgba(79,70,229,0.25);
+      }
+      .contact-submit-btn:active{
+        transform: translateY(0) scale(0.99);
+      }
+
+      /* Cards section premium */
+      .contact-premium-card{
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        background: rgba(255,255,255,0.7);
+        border: 1px solid rgba(15,23,42,0.10);
+        box-shadow: 0 16px 40px rgba(2,6,23,0.06);
+        transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+      }
+      .contact-premium-card:hover{
+        transform: translateY(-6px);
+        box-shadow: 0 26px 70px rgba(2,6,23,0.12);
+        border-color: rgba(99,102,241,0.28);
+      }
+
+      /* Section headings */
+      .contact-section-title{
+        font-size: 1.25rem; /* mobile: text-xl */
+        line-height: 1.3;
+        letter-spacing: -0.01em;
+      }
+      @media (min-width: 1025px){
+        .contact-section-title{
+          font-size: 1.9rem; /* desktop */
+        }
+      }
+      @media (min-width: 768px) and (max-width: 1024px){
+        .contact-section-title{
+          font-size: 1.6rem;
+        }
+      }
+
+      /* FAQ details premium */
+      details.contact-faq{
+        transition: box-shadow .35s ease, border-color .35s ease;
+      }
+      details.contact-faq[open]{
+        box-shadow: 0 22px 55px rgba(2,6,23,0.10);
+        border-color: rgba(99,102,241,0.22);
+      }
+
+      details.contact-faq > summary{
+        min-height: 52px; /* touch area */
+      }
+
+      details.contact-faq p{
+        max-width: 65ch;
+      }
+
+      details.contact-faq > p{
+        animation: contactFAQIn .28s ease both;
+      }
+      @keyframes contactFAQIn{
+        from{ opacity:0; transform: translateY(-4px); }
+        to{ opacity:1; transform: translateY(0); }
+      }
+
+      /* Global section spacing shrink */
+      main.contact-main{
+        padding-top: 1.75rem;
+        padding-bottom: 1.75rem;
+      }
+      .contact-sections-space{
+        row-gap: 4.5rem;
+      }
+
+      @media (max-width: 767.98px){
+        .contact-sections-space{ row-gap: 3rem; }
+      }
+    </style>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Infinite Icons - Contact</title>
@@ -36,7 +241,8 @@
         data-aos-duration="1000"
       >
         <!-- Left Column: Contact Information -->
-        <div class="md:col-span-5 bg-slate-900 text-white p-8 md:p-12 flex flex-col justify-between relative overflow-hidden">
+        <div class="md:col-span-5 bg-slate-900 text-white p-8 md:p-12 flex flex-col justify-between relative overflow-hidden contact-info-block">
+
           <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-indigo-600 rounded-full blur-2xl opacity-40"></div>
           <div class="absolute -left-10 -top-10 w-32 h-32 bg-purple-600 rounded-full blur-2xl opacity-30"></div>
 

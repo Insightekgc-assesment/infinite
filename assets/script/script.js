@@ -112,8 +112,6 @@ function getCardsJsonUrl() {
   return hasPagesRoot ? '../cards.json' : 'cards.json';
 }
 
-
-
 async function injectNavbarFooter() {
   const pathFromPages = '../components';
   const pathFromRoot = 'components';
@@ -174,21 +172,20 @@ async function loadCardDetail() {
       throw new Error(`Article not found for slug=${slug || 'missing'}`);
     }
 
-  const rawImage = card.image || '';
-  let normalizedImage = rawImage;
-  // Support both conventions:
-  // - JSON stores "article/..." for images relative to project root
-  // - pages/article.html uses "articleImage/..." for the hero image assets
-  if (rawImage.startsWith('article/')) normalizedImage = `../${rawImage}`;
-  else if (rawImage.startsWith('articleImage/')) normalizedImage = rawImage;
-  
-
+    const rawImage = card.image || '';
+    let normalizedImage = rawImage;
+    // Support both conventions:
+    // - JSON stores "article/..." for images relative to project root
+    // - pages/article.html uses "articleImage/..." for the hero image assets
+    if (rawImage.startsWith('article/')) normalizedImage = `../${rawImage}`;
+    else if (rawImage.startsWith('articleImage/')) normalizedImage = rawImage;
 
     detailImage.src =
       normalizedImage ||
       `https://picsum.photos/seed/${encodeURIComponent(card.name || 'detail')}/900/1100`;
     detailImage.alt = card.name || 'Founder';
 
+    // Keep all non-rich fields as textContent (names, titles, category, dates, etc.)
     detailCategory.textContent = card.storyLabel || 'Founder Interview';
     detailSubtitle.textContent = '';
     detailHeading.textContent = card.title || card.name || '';
@@ -197,11 +194,35 @@ async function loadCardDetail() {
     detailDate.textContent = card.date || '';
     if (!detailDate.textContent) detailDate.textContent = '—';
 
-    detailArticleDetail.textContent = card.story ? card.story.split(/\r?\n/)[0].trim() : '';
+    // ✅ FIX (rich excerpt + one-time rendering):
+    // Render the excerpt element with innerHTML (so tags from cards.json render correctly),
+    // but only render the *first* paragraph to avoid duplicating the full story content.
+    // Security: excerpt is treated as rich text ONLY for story content.
+    const storyHtml = card.story || '';
+
+    let excerptHtml = '';
+    if (storyHtml) {
+      // Prefer taking the first <p>...</p> block (common for editorial HTML).
+      const pMatch = storyHtml.match(/(<p[\s\S]*?<\/p>)/i);
+      if (pMatch && pMatch[1]) {
+        excerptHtml = pMatch[1];
+      } else {
+        // Fallback: take first ~300 chars as plain text wrapped in <p>.
+        // This prevents printing entire story again and preserves a readable excerpt.
+        const plain = storyHtml
+          .replace(/<[^>]*>/g, ' ')
+          .replace(/\s+/g, ' ')
+          .trim();
+        excerptHtml = plain ? `<p>${plain.slice(0, 300).trim()}…</p>` : '';
+      }
+    }
+
+    detailArticleDetail.innerHTML = excerptHtml;
 
     const renderDocText = async () => {
       if (!card.doc) {
-        detailArticle.textContent = card.story || card.title || '';
+        // JSON may contain HTML tags (e.g. <strong>..</strong>), so render as HTML.
+        detailArticle.innerHTML = card.story || card.title || '';
         return;
       }
 
@@ -214,7 +235,7 @@ async function loadCardDetail() {
         const result = await mammoth.convertToHtml({ arrayBuffer });
         detailArticle.innerHTML = result.value || card.story || card.title || '';
       } catch (docError) {
-        detailArticle.textContent = card.story || card.title || '';
+        detailArticle.innerHTML = card.story || card.title || '';
         console.warn('Unable to load DOCX content:', docError);
       }
     };
@@ -240,15 +261,17 @@ async function loadCardDetail() {
     if (!card.doc) {
       const sections = card.sections || [{ title: 'Story', content: card.story || card.title || '' }];
       detailSections.innerHTML = sections
-        .map(
-          (section) => `
-            <section class="story-section">
-              <h3>${section.title}</h3>
-              <p>${section.content}</p>
-            </section>
-          `,
-        )
-        .join('');
+      .map(
+      (section) => `
+      <section class="story-section">
+      <h3>${section.title}</h3>
+      <div class="story-content">
+      ${section.content}
+      </div>
+      </section>
+      `,
+      )
+      .join('');
     } else {
       detailSections.innerHTML = '';
     }
@@ -293,7 +316,6 @@ function enrichCard(card, index) {
   // - pages/article.html uses "articleImage/..." for the hero image assets
   if (rawImage.startsWith('article/')) normalizedImage = `../${rawImage}`;
   else if (rawImage.startsWith('articleImage/')) normalizedImage = rawImage;
-
 
   return {
     ...card,
@@ -460,4 +482,3 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-  
