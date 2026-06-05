@@ -434,7 +434,7 @@
     }
 
     .btn-primary:hover::before {
-      left: 200%;
+      left: 190%;
     }
 
     .btn-primary:hover {
