@@ -1,20 +1,20 @@
-document.addEventListener(
-  'scroll',
-  function () {
+// document.addEventListener(
+//   'scroll',
+//   function () {
 
-    const scrollY = window.scrollY;
-    const images = document.querySelectorAll(
-      '.header-carousel .carousel-item img',
-    );
+//     const scrollY = window.scrollY;
+//     const images = document.querySelectorAll(
+//       '.header-carousel .carousel-item img',
+//     );
 
 
-  images.forEach((img) => {
-    const scale = 1 + scrollY * 0.0015;
-    if (scale <= 1.4) {
-      img.style.transform = `scale(${scale})`;
-    }
-  });
-});
+//   images.forEach((img) => {
+//     const scale = 1 + scrollY * 0.0015;
+//     if (scale <= 1.4) {
+//       img.style.transform = `scale(${scale})`;
+//     }
+//   });
+// });
 
 // =========================================================
 // Common Utilities Section
@@ -344,6 +344,21 @@ function renderHeroAndCardsFromState(state) {
   } = state;
 
   const heroCard = cards.find((c) => c.id === heroId) || cards[0];
+
+  // If the hero candidate is marked as "Other" in cards.json,
+  // the listing UI may show the story label/preview beneath.
+  // Hide non-founder label by falling back to a real founder card.
+  if (heroCard && heroCard.storyLabel && heroCard.storyLabel.toLowerCase() === 'other') {
+    const fallback = cards.find((c) => c.storyLabel && c.storyLabel.toLowerCase() !== 'other');
+    if (fallback) {
+      heroCard.image = fallback.image;
+      heroCard.name = fallback.name;
+      heroCard.storyLabel = fallback.storyLabel;
+      heroCard.title = fallback.title;
+      heroCard.storyPreview = fallback.storyPreview;
+    }
+  }
+
   heroImage.src = heroCard.image;
   heroImage.alt = heroCard.name;
   heroCategory.textContent = heroCard.storyLabel;
@@ -367,17 +382,14 @@ function renderHeroAndCardsFromState(state) {
       (card) => `
       <article class="story-card founder-card story-card-medium" style="background-image: url('${card.image}');" data-aos="fade-up" data-aos-delay="${card.delay}">
         <div class="story-card-inner">
-          <div class="founder-chip">
-            <span class="story-category">${card.storyLabel}</span>
-          </div>
           <h3 class="founder-name">${card.name}</h3>
-          <h4 class="story-headline">${card.title}</h4>
           <a href="./article-detail.html?slug=${slugify(card.name)}" class="story-cta">Read story</a>
         </div>
       </article>
     `,
     )
     .join('');
+
 
   if (window.AOS) AOS.refresh();
 
