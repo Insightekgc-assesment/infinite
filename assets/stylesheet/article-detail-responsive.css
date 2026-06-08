@@ -1,0 +1,100 @@
+/* =========================================================
+   Article Detail page: fully responsive text + fixed image
+   ========================================================= */
+
+/* Typography safety for dynamic placeholders */
+#detailHeading,
+#detailSubtitle,
+#detailArticleDetail,
+#detailArticle,
+#detailConclusion,
+#detailHighlights,
+#detailQuote,
+#detailStats,
+.detail-intro,
+.detail-article-detail {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: normal;
+  text-wrap: pretty;
+}
+
+#detailHeading {
+  font-size: clamp(2.4rem, 4.8vw, 5.2rem);
+  line-height: 0.96;
+  letter-spacing: -0.05em;
+}
+
+#detailArticle {
+  font-size: clamp(1rem, 1.6vw, 1.12rem);
+  line-height: 1.9;
+}
+
+#detailQuote,
+#detailStats,
+#detailHighlights {
+  width: 100%;
+}
+
+/* =========================================================
+   Fixed image area (requested 234px x 447px)
+   ========================================================= */
+.detail-media {
+  min-height: unset;
+}
+
+.detail-media .media-frame,
+.detail-media .detail-image {
+  width: 234px;
+  height: 447px;
+}
+
+.detail-media .detail-image {
+  object-fit: cover;
+}
+
+.media-caption {
+  max-width: 100%;
+}
+
+/* =========================================================
+   Back button / actions responsiveness
+   ========================================================= */
+.detail-actions {
+  display: flex;
+  justify-content: flex-start;
+}
+
+@media (max-width: 768px) {
+  /* Image scales responsively while keeping same ratio */
+  .detail-media .media-frame,
+  .detail-media .detail-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 234 / 447;
+  }
+
+  /* Button becomes full-width tappable on mobile */
+  .detail-actions {
+    justify-content: center;
+  }
+
+  .detail-actions .btn {
+    width: 100%;
+    max-width: 360px;
+    white-space: normal;
+    text-align: center;
+  }
+}
+
+@media (max-width: 420px) {
+  .detail-content {
+    padding: 1.25rem;
+  }
+
+  .detail-actions .btn {
+    padding: 0.95rem 1.1rem;
+    font-size: 0.98rem;
+  }
+}
+
