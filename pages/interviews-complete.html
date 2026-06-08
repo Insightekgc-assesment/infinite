@@ -1,0 +1,1495 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Infinite Icons - In-Depth Leadership Interviews</title>
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Project Stylesheets -->
+    <link rel="stylesheet" href="../assets/stylesheet/master.css" />
+    <link rel="stylesheet" href="../assets/stylesheet/style.css" />
+    <link rel="stylesheet" href="../assets/stylesheet/navbar.css" />
+    <link rel="stylesheet" href="../assets/stylesheet/footer.css" />
+    <link rel="stylesheet" href="../assets/stylesheet/editorial-premium.css" />
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      /* ===================================================
+         PREMIUM INTERVIEWS PAGE - MASTER STYLES
+         ================================================== */
+
+      :root {
+        --primary: #051d49;
+        --accent-gold: #d4af37;
+        --white: #ffffff;
+        --light-gray: #f8f9fc;
+        --dark-gray: #1a1a1a;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        background: var(--white);
+        color: var(--dark-gray);
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      }
+
+      /* ===================================================
+         HERO SECTION
+         ================================================== */
+
+      .hero-section {
+        width: 100%;
+        padding: 3rem 1rem;
+        background: linear-gradient(
+          135deg,
+          rgba(5, 29, 73, 0.03) 0%,
+          rgba(212, 175, 55, 0.05) 50%,
+          rgba(5, 29, 73, 0.03) 100%
+        );
+        border-bottom: 2px solid rgba(212, 175, 55, 0.15);
+      }
+
+      @media (min-width: 768px) {
+        .hero-section {
+          padding: 5rem 2rem;
+        }
+      }
+
+      @media (min-width: 1200px) {
+        .hero-section {
+          padding: 6rem 4rem;
+        }
+      }
+
+      .hero-content {
+        max-width: 900px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .hero-eyebrow {
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        color: var(--accent-gold);
+        margin-bottom: 1rem;
+        display: block;
+      }
+
+      .hero-title {
+        font-size: clamp(2.2rem, 7vw, 4rem);
+        font-weight: 800;
+        line-height: 1.1;
+        margin-bottom: 1.5rem;
+        letter-spacing: -0.03em;
+        color: var(--primary);
+      }
+
+      .hero-title span {
+        color: var(--accent-gold);
+      }
+
+      .hero-subtitle {
+        font-size: clamp(1rem, 2.2vw, 1.3rem);
+        line-height: 1.8;
+        color: rgba(26, 26, 26, 0.75);
+        max-width: 750px;
+        margin: 0 auto;
+      }
+
+      /* ===================================================
+         INTERVIEWS GRID SECTION
+         ================================================== */
+
+      .interviews-grid-section {
+        width: 100%;
+        padding: 3rem 1rem;
+      }
+
+      @media (min-width: 768px) {
+        .interviews-grid-section {
+          padding: 4rem 2rem;
+        }
+      }
+
+      @media (min-width: 1200px) {
+        .interviews-grid-section {
+          padding: 5rem 4rem;
+        }
+      }
+
+      .section-container {
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+
+      .section-header {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      .section-header h2 {
+        font-size: clamp(2rem, 5vw, 2.8rem);
+        font-weight: 700;
+        line-height: 1.2;
+        color: var(--primary);
+        margin-bottom: 1rem;
+        letter-spacing: -0.02em;
+      }
+
+      .section-subtext {
+        font-size: clamp(0.95rem, 1.8vw, 1.15rem);
+        color: rgba(26, 26, 26, 0.7);
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .interviews-cards-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin-bottom: 3rem;
+      }
+
+      @media (min-width: 640px) {
+        .interviews-cards-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 2.5rem;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .interviews-cards-grid {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 3rem;
+        }
+      }
+
+      .interview-card {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 2rem;
+        background: var(--white);
+        border-radius: 16px;
+        border: 1.5px solid rgba(212, 175, 55, 0.12);
+        box-shadow: 0 10px 30px rgba(5, 29, 73, 0.08);
+        transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+      }
+
+      @media (min-width: 768px) {
+        .interview-card {
+          padding: 2.5rem;
+          border-radius: 20px;
+        }
+      }
+
+      .interview-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 25px 60px rgba(5, 29, 73, 0.15);
+        border-color: rgba(212, 175, 55, 0.3);
+      }
+
+      .card-category {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.55rem 1.25rem;
+        background: rgba(212, 175, 55, 0.08);
+        border: 1px solid rgba(212, 175, 55, 0.3);
+        border-radius: 24px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--primary);
+        text-transform: capitalize;
+        letter-spacing: 0.5px;
+        width: fit-content;
+      }
+
+      .card-category i {
+        color: var(--accent-gold);
+      }
+
+      .card-title {
+        font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+        font-weight: 700;
+        line-height: 1.3;
+        color: var(--primary);
+        margin: 0;
+        transition: color 0.3s ease;
+      }
+
+      .interview-card:hover .card-title {
+        color: var(--accent-gold);
+      }
+
+      .card-description {
+        font-size: 0.95rem;
+        line-height: 1.7;
+        color: rgba(26, 26, 26, 0.75);
+        margin: 0;
+      }
+
+      .card-meta {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        font-size: 0.85rem;
+        color: rgba(26, 26, 26, 0.6);
+        flex-wrap: wrap;
+        margin-top: auto;
+        padding-top: 1rem;
+        border-top: 1px solid rgba(212, 175, 55, 0.1);
+      }
+
+      .meta-item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .meta-item i {
+        color: var(--accent-gold);
+        font-size: 1rem;
+      }
+
+      .card-cta {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.75rem;
+        padding: 0.9rem 2rem;
+        background: var(--accent-gold);
+        color: var(--primary);
+        text-decoration: none;
+        border: none;
+        border-radius: 10px;
+        font-weight: 600;
+        font-size: 0.95rem;
+        cursor: pointer;
+        transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+        width: fit-content;
+        margin-top: auto;
+      }
+
+      .card-cta:hover {
+        background: #b8860b;
+        transform: translateY(-3px);
+        box-shadow: 0 12px 35px rgba(212, 175, 55, 0.35);
+        gap: 1rem;
+      }
+
+      .card-cta i {
+        font-size: 0.9rem;
+        transition: transform 0.3s ease;
+      }
+
+      .card-cta:hover i {
+        transform: translateX(4px);
+      }
+
+      /* ===================================================
+         YOUTUBE CAROUSEL CONTAINER (ORIGINAL)
+         ================================================== */
+
+      .interviews-container {
+        width: 100%;
+        padding: 3rem 1rem;
+        background: linear-gradient(135deg, rgba(5, 29, 73, 0.02) 0%, rgba(212, 175, 55, 0.04) 100%);
+      }
+
+      @media (min-width: 768px) {
+        .interviews-container {
+          padding: 4rem 2rem;
+        }
+      }
+
+      @media (min-width: 1200px) {
+        .interviews-container {
+          padding: 5rem 4rem;
+          max-width: 1400px;
+          margin: 0 auto;
+        }
+      }
+
+      .interviews-header {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      .interviews-header .eyebrow {
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        color: var(--accent-gold);
+        margin-bottom: 1rem;
+        display: block;
+      }
+
+      .interviews-header h1 {
+        font-size: clamp(2rem, 6vw, 3.5rem);
+        line-height: 1.1;
+        margin-bottom: 1.5rem;
+        letter-spacing: -0.03em;
+        color: var(--primary);
+      }
+
+      .interviews-header .subtitle {
+        font-size: clamp(1rem, 2vw, 1.2rem);
+        line-height: 1.8;
+        color: rgba(26, 26, 26, 0.75);
+        max-width: 700px;
+        margin: 0 auto;
+      }
+
+      /* Swiper Customization */
+      .swiper {
+        width: 100%;
+        padding-bottom: 60px;
+      }
+
+      .swiper-slide {
+        background: var(--white);
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(5, 29, 73, 0.1);
+        border: 1px solid rgba(212, 175, 55, 0.12);
+        transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+
+      .swiper-slide:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 50px rgba(5, 29, 73, 0.15);
+        border-color: rgba(212, 175, 55, 0.25);
+      }
+
+      /* Video Container */
+      .video-wrapper {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%;
+        background: #000;
+        overflow: hidden;
+        border-radius: 12px 12px 0 0;
+      }
+
+      .video-wrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+
+      /* Video Content */
+      .video-content {
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        flex: 1;
+      }
+
+      @media (min-width: 768px) {
+        .video-content {
+          padding: 2rem;
+        }
+      }
+
+      .video-title {
+        font-size: clamp(1rem, 2.5vw, 1.25rem);
+        font-weight: 700;
+        line-height: 1.3;
+        color: var(--primary);
+        margin: 0;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .video-title:hover {
+        color: var(--accent-gold);
+      }
+
+      .video-meta {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        font-size: 0.9rem;
+        color: rgba(26, 26, 26, 0.6);
+        flex-wrap: wrap;
+      }
+
+      .video-date {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .video-date i {
+        color: var(--accent-gold);
+      }
+
+      .video-views {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .video-views i {
+        color: var(--accent-gold);
+      }
+
+      .video-description {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        color: rgba(26, 26, 26, 0.75);
+        margin: 0;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
+      .video-cta {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.75rem;
+        padding: 0.75rem 1.5rem;
+        background: var(--accent-gold);
+        color: var(--primary);
+        text-decoration: none;
+        border: none;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 0.95rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        width: fit-content;
+        margin-top: auto;
+      }
+
+      .video-cta:hover {
+        background: #b8860b;
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+      }
+
+      /* Navigation Arrows */
+      .swiper-button-prev,
+      .swiper-button-next {
+        width: 50px;
+        height: 50px;
+        background: var(--accent-gold);
+        border-radius: 50%;
+        color: var(--primary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 1.5rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+      }
+
+      @media (max-width: 767px) {
+        .swiper-button-prev,
+        .swiper-button-next {
+          display: none;
+        }
+      }
+
+      .swiper-button-prev:hover,
+      .swiper-button-next:hover {
+        background: #b8860b;
+        transform: scale(1.1);
+        box-shadow: 0 12px 30px rgba(212, 175, 55, 0.4);
+      }
+
+      .swiper-button-prev::after,
+      .swiper-button-next::after {
+        display: none;
+      }
+
+      /* Pagination Dots */
+      .swiper-pagination {
+        bottom: 0 !important;
+      }
+
+      .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        background: rgba(212, 175, 55, 0.4);
+        opacity: 1;
+        transition: all 0.3s ease;
+      }
+
+      .swiper-pagination-bullet-active {
+        background: var(--accent-gold);
+        width: 30px;
+        border-radius: 5px;
+      }
+
+      /* Responsive Grid */
+      @media (max-width: 640px) {
+        .swiper-slide {
+          width: 100% !important;
+        }
+      }
+
+      @media (min-width: 641px) and (max-width: 1023px) {
+        .swiper-slide {
+          width: calc(50% - 0.5rem) !important;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .swiper-slide {
+          width: calc(33.333% - 0.667rem) !important;
+        }
+      }
+
+      /* ===================================================
+         STATISTICS SECTION
+         ================================================== */
+
+      .stats-section {
+        width: 100%;
+        padding: 3rem 1rem;
+        background: linear-gradient(
+          to right,
+          rgba(212, 175, 55, 0.04),
+          rgba(5, 29, 73, 0.04)
+        );
+      }
+
+      @media (min-width: 768px) {
+        .stats-section {
+          padding: 4rem 2rem;
+        }
+      }
+
+      @media (min-width: 1200px) {
+        .stats-section {
+          padding: 5rem 4rem;
+        }
+      }
+
+      .stats-container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 2rem;
+      }
+
+      @media (min-width: 768px) {
+        .stats-grid {
+          gap: 3rem;
+        }
+      }
+
+      .stat-card {
+        padding: 2rem 1.5rem;
+        text-align: center;
+        border-radius: 16px;
+        background: var(--white);
+        border: 1px solid rgba(212, 175, 55, 0.15);
+        box-shadow: 0 8px 20px rgba(5, 29, 73, 0.06);
+        transition: all 0.3s ease;
+      }
+
+      .stat-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(5, 29, 73, 0.12);
+        border-color: rgba(212, 175, 55, 0.3);
+      }
+
+      .stat-number {
+        font-size: clamp(2rem, 5vw, 3rem);
+        font-weight: 800;
+        color: var(--accent-gold);
+        margin-bottom: 0.5rem;
+        letter-spacing: -1px;
+      }
+
+      .stat-label {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: var(--primary);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .stat-description {
+        font-size: 0.8rem;
+        color: rgba(26, 26, 26, 0.6);
+        margin-top: 0.5rem;
+      }
+
+      /* ===================================================
+         ACCESSIBILITY & UTILITIES
+         ================================================== */
+
+      .skip-link {
+        position: absolute;
+        top: -40px;
+        left: 0;
+        background: var(--primary);
+        color: var(--white);
+        padding: 8px 16px;
+        z-index: 100;
+      }
+
+      .skip-link:focus {
+        top: 0;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+
+        .swiper-slide:hover {
+          transform: none;
+        }
+
+        .interview-card:hover {
+          transform: none;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <a href="#carousel-section" class="skip-link">Skip to carousel</a>
+    
+    <!-- Navbar -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- ==========================================
+         HERO SECTION
+         ========================================== -->
+    <header class="hero-section" data-aos="fade-up" data-aos-duration="1000">
+      <div class="hero-content">
+        <span class="hero-eyebrow">Leadership Insights</span>
+        <h1 class="hero-title">
+          In-Depth <span>Leadership</span> Interviews
+        </h1>
+        <p class="hero-subtitle">
+          Discover how visionary founders, entrepreneurs, and changemakers think, innovate, and build lasting impact through exclusive, in-depth conversations about strategy, resilience, and transformation.
+        </p>
+      </div>
+    </header>
+
+    <main>
+      <!-- ==========================================
+           FEATURED INTERVIEWS GRID SECTION
+           ========================================== -->
+      <section class="interviews-grid-section" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+        <div class="section-container">
+          <div class="section-header">
+            <h2>Featured Leadership Stories</h2>
+            <p class="section-subtext">
+              Curated interviews showcasing diverse perspectives on building, scaling, and leading in today's dynamic market.
+            </p>
+          </div>
+
+          <div class="interviews-cards-grid">
+            <!-- Card 1 -->
+            <article class="interview-card" data-aos="fade-up" data-aos-delay="0">
+              <span class="card-category">
+                <i class="bi bi-lightning-fill"></i>
+                Strategic Leadership
+              </span>
+              <h3 class="card-title">Building Through Uncertainty</h3>
+              <p class="card-description">
+                How top founders navigate market disruption, make critical pivots, and build resilient organizations that thrive during volatility.
+              </p>
+              <div class="card-meta">
+                <div class="meta-item">
+                  <i class="bi bi-clock"></i>
+                  <span>22 min</span>
+                </div>
+                <div class="meta-item">
+                  <i class="bi bi-chat-left-dots"></i>
+                  <span>Leadership</span>
+                </div>
+              </div>
+              <a href="#" class="card-cta">
+                View Interview
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="interview-card" data-aos="fade-up" data-aos-delay="100">
+              <span class="card-category">
+                <i class="bi bi-graph-up"></i>
+                Growth Strategy
+              </span>
+              <h3 class="card-title">From Startup to Scale</h3>
+              <p class="card-description">
+                Insights on scaling operations, building high-performing teams, and maintaining company culture as you grow from early-stage to market leader.
+              </p>
+              <div class="card-meta">
+                <div class="meta-item">
+                  <i class="bi bi-clock"></i>
+                  <span>28 min</span>
+                </div>
+                <div class="meta-item">
+                  <i class="bi bi-chat-left-dots"></i>
+                  <span>Growth</span>
+                </div>
+              </div>
+              <a href="#" class="card-cta">
+                View Interview
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="interview-card" data-aos="fade-up" data-aos-delay="200">
+              <span class="card-category">
+                <i class="bi bi-rocket"></i>
+                Product Innovation
+              </span>
+              <h3 class="card-title">Creating Products That Matter</h3>
+              <p class="card-description">
+                Conversations on product-market fit, customer obsession, and building solutions that solve real problems with authenticity.
+              </p>
+              <div class="card-meta">
+                <div class="meta-item">
+                  <i class="bi bi-clock"></i>
+                  <span>25 min</span>
+                </div>
+                <div class="meta-item">
+                  <i class="bi bi-chat-left-dots"></i>
+                  <span>Product</span>
+                </div>
+              </div>
+              <a href="#" class="card-cta">
+                View Interview
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </article>
+
+            <!-- Card 4 -->
+            <article class="interview-card" data-aos="fade-up" data-aos-delay="300">
+              <span class="card-category">
+                <i class="bi bi-cash-coin"></i>
+                Financial Strategy
+              </span>
+              <h3 class="card-title">Funding & Financial Planning</h3>
+              <p class="card-description">
+                Expert perspectives on raising capital, investor relations, burn rate management, and making strategic financial decisions.
+              </p>
+              <div class="card-meta">
+                <div class="meta-item">
+                  <i class="bi bi-clock"></i>
+                  <span>26 min</span>
+                </div>
+                <div class="meta-item">
+                  <i class="bi bi-chat-left-dots"></i>
+                  <span>Finance</span>
+                </div>
+              </div>
+              <a href="#" class="card-cta">
+                View Interview
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </article>
+
+            <!-- Card 5 -->
+            <article class="interview-card" data-aos="fade-up" data-aos-delay="400">
+              <span class="card-category">
+                <i class="bi bi-people"></i>
+                Team Culture
+              </span>
+              <h3 class="card-title">Building Exceptional Teams</h3>
+              <p class="card-description">
+                How visionary leaders attract talent, foster innovation, create psychological safety, and build teams that execute at the highest level.
+              </p>
+              <div class="card-meta">
+                <div class="meta-item">
+                  <i class="bi bi-clock"></i>
+                  <span>30 min</span>
+                </div>
+                <div class="meta-item">
+                  <i class="bi bi-chat-left-dots"></i>
+                  <span>Teams</span>
+                </div>
+              </div>
+              <a href="#" class="card-cta">
+                View Interview
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </article>
+
+            <!-- Card 6 -->
+            <article class="interview-card" data-aos="fade-up" data-aos-delay="500">
+              <span class="card-category">
+                <i class="bi bi-globe"></i>
+                Market Expansion
+              </span>
+              <h3 class="card-title">Going Global: Market Expansion</h3>
+              <p class="card-description">
+                Navigating international markets, localizing products, understanding regulatory landscapes, and expanding successfully worldwide.
+              </p>
+              <div class="card-meta">
+                <div class="meta-item">
+                  <i class="bi bi-clock"></i>
+                  <span>24 min</span>
+                </div>
+                <div class="meta-item">
+                  <i class="bi bi-chat-left-dots"></i>
+                  <span>Markets</span>
+                </div>
+              </div>
+              <a href="#" class="card-cta">
+                View Interview
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           YOUTUBE CAROUSEL SECTION (KEEP UNCHANGED)
+           ========================================== -->
+      <section id="carousel-section" class="interviews-container">
+        <div class="interviews-header" data-aos="fade-up" data-aos-duration="1000">
+          <span class="eyebrow">Featured Video Content</span>
+          <h1>Conversations with Inspiring People</h1>
+          <p class="subtitle">
+            Dive deep into the stories, challenges, and wisdom of leaders, innovators, and changemakers shaping the future.
+          </p>
+        </div>
+
+        <!-- Swiper Carousel -->
+        <div id="interviews-carousel" class="swiper" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="100">
+          <div class="swiper-wrapper">
+            <!-- Interview 1 -->
+            <div class="swiper-slide">
+              <div class="video-wrapper">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/f2TmtM_gB-0?si=bQnq6YUpZuvMEPQL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+              </div>
+              <div class="video-content">
+                <a href="https://youtube.com/watch?v=f2TmtM_gB-0" target="_blank" class="video-title">
+                  Building a Legacy: The Founder's Journey
+                </a>
+                <div class="video-meta">
+                  <div class="video-date">
+                    <i class="bi bi-calendar3"></i>
+                    <span>Mar 15, 2024</span>
+                  </div>
+                  <div class="video-views">
+                    <i class="bi bi-eye"></i>
+                    <span>45.2K views</span>
+                  </div>
+                </div>
+                <p class="video-description">
+                  Join us as we explore the defining moments, challenges, and triumphs that shaped one of today's most influential leaders.
+                </p>
+                <a href="https://youtube.com/watch?v=f2TmtM_gB-0" target="_blank" class="video-cta">
+                  <i class="bi bi-play-fill"></i>
+                  Watch on YouTube
+                </a>
+              </div>
+            </div>
+
+            <!-- Interview 2 -->
+            <div class="swiper-slide">
+              <div class="video-wrapper">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/wpqnH9hAb84?si=-Q1lJHVN3y4rJCgV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+              </div>
+              <div class="video-content">
+                <a href="https://youtube.com/watch?v=wpqnH9hAb84" target="_blank" class="video-title">
+                  Innovation in Crisis: How Leaders Adapt and Thrive
+                </a>
+                <div class="video-meta">
+                  <div class="video-date">
+                    <i class="bi bi-calendar3"></i>
+                    <span>Mar 10, 2024</span>
+                  </div>
+                  <div class="video-views">
+                    <i class="bi bi-eye"></i>
+                    <span>38.7K views</span>
+                  </div>
+                </div>
+                <p class="video-description">
+                  Discover the strategies and mindsets that help visionary leaders navigate uncertainty and emerge stronger.
+                </p>
+                <a href="https://youtube.com/watch?v=wpqnH9hAb84" target="_blank" class="video-cta">
+                  <i class="bi bi-play-fill"></i>
+                  Watch on YouTube
+                </a>
+              </div>
+            </div>
+
+            <!-- Interview 3 -->
+            <div class="swiper-slide">
+              <div class="video-wrapper">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/WTcHvfs-sno?si=hQicuCe-_gqoIn0v" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+              </div>
+              <div class="video-content">
+                <a href="https://youtube.com/watch?v=WTcHvfs-sno" target="_blank" class="video-title">
+                  The Science of Building World-Class Teams
+                </a>
+                <div class="video-meta">
+                  <div class="video-date">
+                    <i class="bi bi-calendar3"></i>
+                    <span>Mar 5, 2024</span>
+                  </div>
+                  <div class="video-views">
+                    <i class="bi bi-eye"></i>
+                    <span>52.3K views</span>
+                  </div>
+                </div>
+                <p class="video-description">
+                  Learn the principles and practices that enable leaders to recruit, develop, and retain exceptional talent.
+                </p>
+                <a href="https://youtube.com/watch?v=WTcHvfs-sno" target="_blank" class="video-cta">
+                  <i class="bi bi-play-fill"></i>
+                  Watch on YouTube
+                </a>
+              </div>
+            </div>
+
+            <!-- Interview 4 -->
+            <div class="swiper-slide">
+              <div class="video-wrapper">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Cjfb7kQy_qY?si=gywQfKzl30qs-LSr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+              </div>
+              <div class="video-content">
+                <a href="https://youtube.com/watch?v=Cjfb7kQy_qY" target="_blank" class="video-title">
+                  From Idea to Impact: The Product Strategy Playbook
+                </a>
+                <div class="video-meta">
+                  <div class="video-date">
+                    <i class="bi bi-calendar3"></i>
+                    <span>Feb 28, 2024</span>
+                  </div>
+                  <div class="video-views">
+                    <i class="bi bi-eye"></i>
+                    <span>41.8K views</span>
+                  </div>
+                </div>
+                <p class="video-description">
+                  Explore the frameworks and insights that transform customer problems into breakthrough products.
+                </p>
+                <a href="https://youtube.com/watch?v=Cjfb7kQy_qY" target="_blank" class="video-cta">
+                  <i class="bi bi-play-fill"></i>
+                  Watch on YouTube
+                </a>
+              </div>
+            </div>
+
+            <!-- Interview 5 -->
+            <div class="swiper-slide">
+              <div class="video-wrapper">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/CtFBSXDVee4?si=5WMcv1o89n2koUWp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+              </div>
+              <div class="video-content">
+                <a href="https://youtube.com/watch?v=CtFBSXDVee4" target="_blank" class="video-title">
+                  Scaling with Purpose: Business Growth & Social Impact
+                </a>
+                <div class="video-meta">
+                  <div class="video-date">
+                    <i class="bi bi-calendar3"></i>
+                    <span>Feb 20, 2024</span>
+                  </div>
+                  <div class="video-views">
+                    <i class="bi bi-eye"></i>
+                    <span>36.4K views</span>
+                  </div>
+                </div>
+                <p class="video-description">
+                  Discover how leading entrepreneurs balance rapid growth with meaningful positive impact on society.
+                </p>
+                <a href="https://youtube.com/watch?v=CtFBSXDVee4" target="_blank" class="video-cta">
+                  <i class="bi bi-play-fill"></i>
+                  Watch on YouTube
+                </a>
+              </div>
+            </div>
+
+            <!-- Interview 6 -->
+            <div class="swiper-slide">
+              <div class="video-wrapper">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/KSNBKy-6qxw?rel=0&modestbranding=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+              </div>
+              <div class="video-content">
+                <a href="https://youtube.com/watch?v=KSNBKy-6qxw" target="_blank" class="video-title">
+                  The Future is Female: Women Leaders Reshaping Industries
+                </a>
+                <div class="video-meta">
+                  <div class="video-date">
+                    <i class="bi bi-calendar3"></i>
+                    <span>Feb 12, 2024</span>
+                  </div>
+                  <div class="video-views">
+                    <i class="bi bi-eye"></i>
+                    <span>58.9K views</span>
+                  </div>
+                </div>
+                <p class="video-description">
+                  Celebrate the achievements and insights of groundbreaking women leaders who are transforming the business landscape.
+                </p>
+                <a href="https://youtube.com/watch?v=KSNBKy-6qxw" target="_blank" class="video-cta">
+                  <i class="bi bi-play-fill"></i>
+                  Watch on YouTube
+                </a>
+              </div>
+            </div>
+
+            <!-- Interview 7 -->
+            <div class="swiper-slide">
+              <div class="video-wrapper">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Bhv7g92SrpQ?rel=0&modestbranding=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+              </div>
+              <div class="video-content">
+                <a href="https://youtube.com/watch?v=Bhv7g92SrpQ" target="_blank" class="video-title">
+                  Leadership Under Pressure: Crisis Management Strategies
+                </a>
+                <div class="video-meta">
+                  <div class="video-date">
+                    <i class="bi bi-calendar3"></i>
+                    <span>Feb 5, 2024</span>
+                  </div>
+                  <div class="video-views">
+                    <i class="bi bi-eye"></i>
+                    <span>47.6K views</span>
+                  </div>
+                </div>
+                <p class="video-description">
+                  Learn how industry leaders make critical decisions during challenging times and maintain organizational resilience.
+                </p>
+                <a href="https://youtube.com/watch?v=Bhv7g92SrpQ" target="_blank" class="video-cta">
+                  <i class="bi bi-play-fill"></i>
+                  Watch on YouTube
+                </a>
+              </div>
+            </div>
+
+            <!-- Interview 8 -->
+            <div class="swiper-slide">
+              <div class="video-wrapper">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/WDZHnAyqcm4?rel=0&modestbranding=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+              </div>
+              <div class="video-content">
+                <a href="https://youtube.com/watch?v=WDZHnAyqcm4" target="_blank" class="video-title">
+                  Digital Transformation: The Tech Revolution in Business
+                </a>
+                <div class="video-meta">
+                  <div class="video-date">
+                    <i class="bi bi-calendar3"></i>
+                    <span>Jan 28, 2024</span>
+                  </div>
+                  <div class="video-views">
+                    <i class="bi bi-eye"></i>
+                    <span>62.3K views</span>
+                  </div>
+                </div>
+                <p class="video-description">
+                  Explore how companies leverage technology to transform operations, customer experiences, and business models.
+                </p>
+                <a href="https://youtube.com/watch?v=WDZHnAyqcm4" target="_blank" class="video-cta">
+                  <i class="bi bi-play-fill"></i>
+                  Watch on YouTube
+                </a>
+              </div>
+            </div>
+
+            <!-- Interview 9 -->
+            <div class="swiper-slide">
+              <div class="video-wrapper">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/NMjd46NiEGE?si=dvEkpbYo8nVrX0L-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+              </div>
+              <div class="video-content">
+                <a href="https://youtube.com/watch?v=NMjd46NiEGE" target="_blank" class="video-title">
+                  Sustainable Business Models: Profit with Purpose
+                </a>
+                <div class="video-meta">
+                  <div class="video-date">
+                    <i class="bi bi-calendar3"></i>
+                    <span>Jan 20, 2024</span>
+                  </div>
+                  <div class="video-views">
+                    <i class="bi bi-eye"></i>
+                    <span>39.1K views</span>
+                  </div>
+                </div>
+                <p class="video-description">
+                  Discover how successful companies integrate sustainability and environmental responsibility into their core strategies.
+                </p>
+                <a href="https://youtube.com/watch?v=NMjd46NiEGE" target="_blank" class="video-cta">
+                  <i class="bi bi-play-fill"></i>
+                  Watch on YouTube
+                </a>
+              </div>
+            </div>
+
+            <!-- Interview 10 -->
+            <div class="swiper-slide">
+              <div class="video-wrapper">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/TUSWrJ33ZfQ?si=P9IsXpiozw2hvqrF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+              </div>
+              <div class="video-content">
+                <a href="https://youtube.com/watch?v=TUSWrJ33ZfQ" target="_blank" class="video-title">
+                  The Remote Work Revolution: Building Distributed Teams
+                </a>
+                <div class="video-meta">
+                  <div class="video-date">
+                    <i class="bi bi-calendar3"></i>
+                    <span>Jan 12, 2024</span>
+                  </div>
+                  <div class="video-views">
+                    <i class="bi bi-eye"></i>
+                    <span>54.8K views</span>
+                  </div>
+                </div>
+                <p class="video-description">
+                  Learn how forward-thinking leaders manage, motivate, and build cohesive teams in fully remote and hybrid environments.
+                </p>
+                <a href="https://youtube.com/watch?v=TUSWrJ33ZfQ" target="_blank" class="video-cta">
+                  <i class="bi bi-play-fill"></i>
+                  Watch on YouTube
+                </a>
+              </div>
+            </div>
+
+            <!-- Interview 11 -->
+            <div class="swiper-slide">
+              <div class="video-wrapper">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/OgncjGUpSsM?si=MNK26DQWkVGlkLpI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+              </div>
+              <div class="video-content">
+                <a href="https://youtube.com/watch?v=OgncjGUpSsM" target="_blank" class="video-title">
+                  Customer-Centric Innovation: The Path to Loyalty
+                </a>
+                <div class="video-meta">
+                  <div class="video-date">
+                    <i class="bi bi-calendar3"></i>
+                    <span>Dec 28, 2023</span>
+                  </div>
+                  <div class="video-views">
+                    <i class="bi bi-eye"></i>
+                    <span>43.7K views</span>
+                  </div>
+                </div>
+                <p class="video-description">
+                  Discover how putting customers at the center of decision-making leads to breakthrough products and lasting loyalty.
+                </p>
+                <a href="https://youtube.com/watch?v=OgncjGUpSsM" target="_blank" class="video-cta">
+                  <i class="bi bi-play-fill"></i>
+                  Watch on YouTube
+                </a>
+              </div>
+            </div>
+
+            <!-- Interview 12 -->
+            <div class="swiper-slide">
+              <div class="video-wrapper">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/vAXJ6E7x79s?si=yJ66AsldBmmVUpj-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+              </div>
+              <div class="video-content">
+                <a href="https://youtube.com/watch?v=vAXJ6E7x79s" target="_blank" class="video-title">
+                  Fundraising Secrets: From Seed to Series C
+                </a>
+                <div class="video-meta">
+                  <div class="video-date">
+                    <i class="bi bi-calendar3"></i>
+                    <span>Dec 18, 2023</span>
+                  </div>
+                  <div class="video-views">
+                    <i class="bi bi-eye"></i>
+                    <span>51.2K views</span>
+                  </div>
+                </div>
+                <p class="video-description">
+                  Learn insider strategies on pitching to investors, building strong investor relationships, and scaling through funding rounds.
+                </p>
+                <a href="https://youtube.com/watch?v=vAXJ6E7x79s" target="_blank" class="video-cta">
+                  <i class="bi bi-play-fill"></i>
+                  Watch on YouTube
+                </a>
+              </div>
+            </div>
+
+            <!-- Interview 13 -->
+            <div class="swiper-slide">
+              <div class="video-wrapper">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/4PMkr-q4w3w?si=WZ2b1VlzpJoQz4Ci" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+              </div>
+              <div class="video-content">
+                <a href="https://youtube.com/watch?v=4PMkr-q4w3w" target="_blank" class="video-title">
+                  Marketing Marvels: Building Brands That Stick
+                </a>
+                <div class="video-meta">
+                  <div class="video-date">
+                    <i class="bi bi-calendar3"></i>
+                    <span>Dec 8, 2023</span>
+                  </div>
+                  <div class="video-views">
+                    <i class="bi bi-eye"></i>
+                    <span>48.5K views</span>
+                  </div>
+                </div>
+                <p class="video-description">
+                  Explore cutting-edge marketing strategies that build memorable brands, create viral moments, and drive authentic engagement.
+                </p>
+                <a href="https://youtube.com/watch?v=4PMkr-q4w3w" target="_blank" class="video-cta">
+                  <i class="bi bi-play-fill"></i>
+                  Watch on YouTube
+                </a>
+              </div>
+            </div>
+
+            <!-- Interview 14 -->
+            <div class="swiper-slide">
+              <div class="video-wrapper">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/KJDbJCIhIJc?si=uUXbD_n4J4IQL0Zo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+              </div>
+              <div class="video-content">
+                <a href="https://youtube.com/watch?v=KJDbJCIhIJc" target="_blank" class="video-title">
+                  Tech Trends Explained: The Future of Industry
+                </a>
+                <div class="video-meta">
+                  <div class="video-date">
+                    <i class="bi bi-calendar3"></i>
+                    <span>Nov 28, 2023</span>
+                  </div>
+                  <div class="video-views">
+                    <i class="bi bi-eye"></i>
+                    <span>67.4K views</span>
+                  </div>
+                </div>
+                <p class="video-description">
+                  Understand emerging technologies like AI, blockchain, and IoT from leaders who are shaping the future landscape.
+                </p>
+                <a href="https://youtube.com/watch?v=KJDbJCIhIJc" target="_blank" class="video-cta">
+                  <i class="bi bi-play-fill"></i>
+                  Watch on YouTube
+                </a>
+              </div>
+            </div>
+
+            <!-- Interview 15 -->
+            <div class="swiper-slide">
+              <div class="video-wrapper">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/7MlZMWLlE50?si=MTQ94En2upEOi2EX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+              </div>
+              <div class="video-content">
+                <a href="https://youtube.com/watch?v=7MlZMWLlE50" target="_blank" class="video-title">
+                  Global Expansion Strategies: Taking Your Business Worldwide
+                </a>
+                <div class="video-meta">
+                  <div class="video-date">
+                    <i class="bi bi-calendar3"></i>
+                    <span>Nov 15, 2023</span>
+                  </div>
+                  <div class="video-views">
+                    <i class="bi bi-eye"></i>
+                    <span>45.9K views</span>
+                  </div>
+                </div>
+                <p class="video-description">
+                  Learn how visionary entrepreneurs successfully expand into new markets, cultures, and regions while maintaining growth.
+                </p>
+                <a href="https://youtube.com/watch?v=7MlZMWLlE50" target="_blank" class="video-cta">
+                  <i class="bi bi-play-fill"></i>
+                  Watch on YouTube
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Navigation Arrows -->
+          <div class="swiper-button-prev">
+            <i class="bi bi-chevron-left"></i>
+          </div>
+          <div class="swiper-button-next">
+            <i class="bi bi-chevron-right"></i>
+          </div>
+
+          <!-- Pagination Dots -->
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           STATISTICS SECTION
+           ========================================== -->
+      <section class="stats-section" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+        <div class="stats-container">
+          <div class="stats-grid">
+            <!-- Stat 1 -->
+            <div class="stat-card" data-aos="fade-up" data-aos-delay="0">
+              <div class="stat-number">50+</div>
+              <div class="stat-label">Interviews</div>
+              <p class="stat-description">Premium Leadership Content</p>
+            </div>
+
+            <!-- Stat 2 -->
+            <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+              <div class="stat-number">200+</div>
+              <div class="stat-label">Hours</div>
+              <p class="stat-description">In-Depth Video Conversations</p>
+            </div>
+
+            <!-- Stat 3 -->
+            <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+              <div class="stat-number">30+</div>
+              <div class="stat-label">Industries</div>
+              <p class="stat-description">Diverse Market Perspectives</p>
+            </div>
+
+            <!-- Stat 4 -->
+            <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+              <div class="stat-number">5M+</div>
+              <div class="stat-label">Viewers</div>
+              <p class="stat-description">Global Leadership Community</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- ==========================================
+         SCRIPTS
+         ========================================== -->
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS (Animate On Scroll) -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Project Scripts -->
+    <script src="../assets/script/navbar.js" defer></script>
+    <script src="../assets/script/footer.js" defer></script>
+    <script src="../assets/script/script.js" defer></script>
+
+    <!-- Master Initialization Script -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        // Initialize AOS (Animate On Scroll)
+        if (window.AOS) {
+          AOS.init({
+            duration: 1000,
+            easing: 'ease-out-cubic',
+            once: true,
+            mirror: false,
+            offset: 120,
+            disable: function () {
+              return window.innerWidth < 768;
+            },
+          });
+        }
+
+        // Initialize Swiper Carousel
+        const swiper = new Swiper('#interviews-carousel', {
+          // Responsive breakpoints
+          breakpoints: {
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+            },
+          },
+
+          // Autoplay settings
+          autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          },
+
+          // Navigation
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+
+          // Pagination
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            dynamicBullets: true,
+          },
+
+          // Additional settings
+          loop: true,
+          speed: 600,
+          grabCursor: true,
+          effect: 'slide',
+
+          // Accessibility
+          a11y: {
+            enabled: true,
+          },
+        });
+
+        // Pause autoplay on hover
+        const carouselElement = document.getElementById('interviews-carousel');
+        if (carouselElement) {
+          carouselElement.addEventListener('mouseenter', () => {
+            swiper.autoplay.pause();
+          });
+
+          carouselElement.addEventListener('mouseleave', () => {
+            swiper.autoplay.resume();
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -352,6 +352,12 @@ function renderHeroAndCardsFromState(state) {
   heroFounderName.textContent = heroCard.name;
   heroFounderRole.textContent = 'Founder';
 
+  // Slug-based hero CTA (so this listing page card links like article cards)
+  const heroReadStory = document.getElementById('heroReadStory');
+  if (heroReadStory) {
+    heroReadStory.href = `./article-detail.html?slug=${slugify(heroCard.name)}`;
+  }
+
   const filtered = cards.filter((c) => c.id !== heroId);
   const start = (currentPage - 1) * cardsPerPage;
   const visibleCards = filtered.slice(start, start + cardsPerPage);
