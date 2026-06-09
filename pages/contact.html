@@ -287,159 +287,103 @@
 
           <!-- Social Media Icons -->
           <div class="relative z-10 mt-12 md:mt-0 pt-6 border-t border-slate-800 flex space-x-4 text-xl">
-            <a href="#" class="text-slate-400 hover:text-white transition-colors" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
-            <a href="#" class="text-slate-400 hover:text-white transition-colors" aria-label="GitHub"><i class="bi bi-github"></i></a>
-            <a href="#" class="text-slate-400 hover:text-white transition-colors" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-            <a href="#" class="text-slate-400 hover:text-white transition-colors" aria-label="Dribbble"><i class="bi bi-dribbble"></i></a>
+            <a href="/pages/contact.html" class="text-slate-400 hover:text-white transition-colors" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="/pages/contact.html" class="text-slate-400 hover:text-white transition-colors" aria-label="GitHub"><i class="bi bi-github"></i></a>
+            <a href="/pages/contact.html" class="text-slate-400 hover:text-white transition-colors" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="/pages/contact.html" class="text-slate-400 hover:text-white transition-colors" aria-label="Dribbble"><i class="bi bi-dribbble"></i></a>
           </div>
         </div>
 
-        <!-- Right Column: Contact Form -->
-        <div class="md:col-span-7 p-8 md:p-12">
-          <form action="#" method="POST" class="space-y-6">
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <div>
-                <label for="first-name" class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">First Name</label>
-                <input type="text" id="first-name" name="first-name" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-indigo-500 focus:bg-white transition-all text-sm" placeholder="Jane" />
-              </div>
-              <div>
-                <label for="last-name" class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">Last Name</label>
-                <input type="text" id="last-name" name="last-name" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-indigo-500 focus:bg-white transition-all text-sm" placeholder="Doe" />
-              </div>
-            </div>
+<!-- Right Column: Contact Form -->
+<div class="md:col-span-7 p-8 md:p-12">
+  <form action="#" method="POST" class="space-y-6">
+    
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <div>
+        <label for="first-name" class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">
+          First Name
+        </label>
+        <input
+          type="text"
+          id="first-name"
+          name="first-name"
+          required
+          class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-indigo-500 focus:bg-white transition-all text-sm"
+          placeholder="Jane"
+        />
+      </div>
 
-            <div>
-              <label for="email" class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">Email Address</label>
-              <input type="email" id="email" name="email" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-indigo-500 focus:bg-white transition-all text-sm" placeholder="jane.doe@example.com" />
-            </div>
+      <div>
+        <label for="last-name" class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">
+          Last Name
+        </label>
+        <input
+          type="text"
+          id="last-name"
+          name="last-name"
+          required
+          class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-indigo-500 focus:bg-white transition-all text-sm"
+          placeholder="Doe"
+        />
+      </div>
+    </div>
 
-            <div>
-              <label for="subject" class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">Subject</label>
-              <select id="subject" name="subject" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-indigo-500 focus:bg-white transition-all text-sm appearance-none">
-                <option value="general">General Inquiry</option>
-                <option value="support">Technical Support / Bug Report</option>
-                <option value="billing">Commercial Licensing & Enterprise</option>
-                <option value="partnership">Custom Icon Design Requests</option>
-              </select>
-            </div>
+    <div>
+      <label for="email" class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">
+        Email Address
+      </label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        required
+        class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-indigo-500 focus:bg-white transition-all text-sm"
+        placeholder="jane.doe@example.com"
+      />
+    </div>
 
-            <div>
-              <label for="message" class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">Message</label>
-              <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-indigo-500 focus:bg-white transition-all text-sm resize-none" placeholder="Tell us how we can help you..."></textarea>
-            </div>
+    <div>
+      <label for="message" class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">
+        Message
+      </label>
+      <textarea
+        id="message"
+        name="message"
+        rows="5"
+        required
+        class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-indigo-500 focus:bg-white transition-all text-sm resize-none"
+        placeholder="Tell us how we can help you..."
+      ></textarea>
+    </div>
 
-            <div>
-              <button type="submit" class="w-full sm:w-auto px-8 py-3.5 bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-800 text-white font-medium rounded-xl shadow-lg shadow-indigo-600/20 transition-all text-sm flex items-center justify-center space-x-2 cursor-pointer">
-                <span>Send Message</span>
-                <i class="bi bi-send-fill text-xs"></i>
-              </button>
-            </div>
-          </form>
-        </div>
-      </section>
+    <!-- Submit Button -->
+    <div class="pt-2">
+      <button
+        type="submit"
+        class="group w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl hover:-translate-y-0.5"
+      >
+        Send Message
 
-      <!-- SECTION 2: SPECIFIC CHANNELS (CARDS) -->
-      <section class="max-w-6xl mx-auto" data-aos="fade-up" data-aos-delay="100">
-        <div class="text-center mb-10">
-          <h2 class="text-2xl font-bold tracking-tight text-slate-900">Looking for something specific?</h2>
-          <p class="text-slate-500 text-sm mt-2">Skip the contact form queue by reaching directly to our designated teams.</p>
-        </div>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M13 7l5 5m0 0l-5 5m5-5H6"
+          />
+        </svg>
+      </button>
+    </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <!-- Card 1 -->
-          <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
-            <div class="text-indigo-600 text-xl mb-3"><i class="bi bi-megaphone"></i></div>
-            <h3 class="font-semibold text-slate-900 mb-1 text-base">Press & Media</h3>
-            <p class="text-slate-500 text-xs mb-4 leading-relaxed">Download our brand kit, asset designs, or reach out for media statements and interviews.</p>
-            <a href="mailto:press@infiniteicons.com" class="text-xs font-medium text-indigo-600 hover:text-indigo-700">press@infiniteicons.com &rarr;</a>
-          </div>
-          <!-- Card 2 -->
-          <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
-            <div class="text-indigo-600 text-xl mb-3"><i class="bi bi-briefcase"></i></div>
-            <h3 class="font-semibold text-slate-900 mb-1 text-base">Careers & Talent</h3>
-            <p class="text-slate-500 text-xs mb-4 leading-relaxed">Want to design the future of visual icons? Check open positions or submit an open portfolio application.</p>
-            <a href="/careers" class="text-xs font-medium text-indigo-600 hover:text-indigo-700">View Open Positions &rarr;</a>
-          </div>
-          <!-- Card 3 -->
-          <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
-            <div class="text-indigo-600 text-xl mb-3"><i class="bi bi-shield-check"></i></div>
-            <h3 class="font-semibold text-slate-900 mb-1 text-base">Legal & Licensing</h3>
-            <p class="text-slate-500 text-xs mb-4 leading-relaxed">Inquiries regarding extensive commercial redistribution, digital redistribution rights, or copyright questions.</p>
-            <a href="mailto:legal@infiniteicons.com" class="text-xs font-medium text-indigo-600 hover:text-indigo-700">legal@infiniteicons.com &rarr;</a>
-          </div>
-        </div>
-      </section>
+  </form>
+</div>
 
-      <!-- SECTION 3: FAQ ACCORDION -->
-      <section class="max-w-4xl mx-auto" data-aos="fade-up" data-aos-delay="200">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl font-bold tracking-tight text-slate-900">Frequently Asked Questions</h2>
-          <p class="text-slate-500 text-sm mt-2">Get instant answers to the questions we get asked most frequently.</p>
-        </div>
-
-        <div class="space-y-4">
-          <!-- FAQ Item 1 -->
-          <details class="group bg-white rounded-xl border border-slate-200 p-5 [&_summary::-webkit-details-marker]:hidden cursor-pointer" open>
-            <summary class="flex items-center justify-between font-medium text-slate-900 list-none text-sm">
-              <span>Can I use Infinite Icons in commercial end products?</span>
-              <span class="transition group-open:rotate-180 text-xs text-slate-400">
-                <i class="bi bi-chevron-down"></i>
-              </span>
-            </summary>
-            <p class="mt-3 text-xs leading-relaxed text-slate-500 border-t border-slate-100 pt-3">
-              Absolutely! All icons downloaded under our standard license can be used in personal and commercial web designs, print elements, software, applications, and marketing materials without mandatory attribution. 
-            </p>
-          </details>
-
-          <!-- FAQ Item 2 -->
-          <details class="group bg-white rounded-xl border border-slate-200 p-5 [&_summary::-webkit-details-marker]:hidden cursor-pointer">
-            <summary class="flex items-center justify-between font-medium text-slate-900 list-none text-sm">
-              <span>Do you accept requests for custom icon sets?</span>
-              <span class="transition group-open:rotate-180 text-xs text-slate-400">
-                <i class="bi bi-chevron-down"></i>
-              </span>
-            </summary>
-            <p class="mt-3 text-xs leading-relaxed text-slate-500 border-t border-slate-100 pt-3">
-              Yes, our specialized design team crafts tailored vectors for brands. Select "Custom Icon Design Requests" in the contact form dropdown menu above, and detail your project timeline and preferred guidelines.
-            </p>
-          </details>
-
-          <!-- FAQ Item 3 -->
-          <details class="group bg-white rounded-xl border border-slate-200 p-5 [&_summary::-webkit-details-marker]:hidden cursor-pointer">
-            <summary class="flex items-center justify-between font-medium text-slate-900 list-none text-sm">
-              <span>What file formats are provided upon download?</span>
-              <span class="transition group-open:rotate-180 text-xs text-slate-400">
-                <i class="bi bi-chevron-down"></i>
-              </span>
-            </summary>
-            <p class="mt-3 text-xs leading-relaxed text-slate-500 border-t border-slate-100 pt-3">
-              We provide clean, fully scalable native SVGs, optimized React components, icon fonts (WOFF2), and raw high-res PNG formats for developers and design system managers alike.
-            </p>
-          </details>
-        </div>
-      </section>
-
-      <!-- SECTION 4: GLOBAL LOCATIONS -->
-      <section class="max-w-6xl mx-auto" data-aos="fade-up" data-aos-delay="300">
-        <div class="text-center mb-10">
-          <h2 class="text-2xl font-bold tracking-tight text-slate-900">Our Global Footprint</h2>
-          <p class="text-slate-500 text-sm mt-2">While we work heavily in digital spaces, you can find us distributed around these regional nodes.</p>
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div class="space-y-2">
-            <h4 class="font-semibold text-slate-900 text-sm">San Francisco (HQ)</h4>
-            <p class="text-xs text-slate-500 leading-relaxed">101 Design Innovation Way, Suite 404<br>San Francisco, CA 94103<br><span class="text-indigo-600">sf@infiniteicons.com</span></p>
-          </div>
-          <div class="space-y-2">
-            <h4 class="font-semibold text-slate-900 text-sm">London Hub</h4>
-            <p class="text-xs text-slate-500 leading-relaxed">24 Creative Quarter, Shoreditch High St<br>London, E1 6JE, United Kingdom<br><span class="text-indigo-600">uk@infiniteicons.com</span></p>
-          </div>
-          <div class="space-y-2">
-            <h4 class="font-semibold text-slate-900 text-sm">Tokyo Studio</h4>
-            <p class="text-xs text-slate-500 leading-relaxed">Chome-5-1 Shibuya, Shibuya City<br>Tokyo 150-0002, Japan<br><span class="text-indigo-600">tokyo@infiniteicons.com</span></p>
-          </div>
-        </div>
       </section>
 
     </main>

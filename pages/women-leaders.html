@@ -21,237 +21,216 @@
 
     <!-- Tailwind CSS (CDN) -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
+   <style>
+    .wl-hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+      padding: 80px 10%;
+      background: #f3ede6;
+    }
+
+    .wl-hero h1 {
+      font-size: 52px;
+      color: var(--primary);
+      line-height: 1.2;
+    }
+
+    .wl-hero p {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #555;
+    }
+
+    .wl-hero button {
+      margin-top: 25px;
+      padding: 12px 22px;
+      border: none;
+      background: var(--primary);
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .wl-hero img {
+      width: 100%;
+      border-radius: 20px;
+    }
+
+    .section {
+      padding: 80px 10%;
+    }
+
+    .title {
+      font-size: 40px;
+      color: var(--primary);
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid #eee;
+      padding: 25px;
+      border-radius: 15px;
+    }
+
+    .dark {
+      background: #051D49;
+      color: white;
+    }
+
+    @media(max-width:900px){
+      .wl-hero, .grid-2, .grid-3 {
+        grid-template-columns: 1fr;
+      }
+      .wl-hero {
+        padding: 60px 6%;
+      }
+    }
+  </style>
   </head>
 
   <body>
     <div id="navbar-placeholder"></div>
 
-    <main>
-      <section class="vision-section" data-aos="fade-up" data-aos-duration="1200">
-        <h1 class="vision-bg-text" data-aos="zoom-in" data-aos-duration="1800" data-aos-delay="100">
-          WOMEN LEADERS
-        </h1>
+   <main>
 
-        <div class="vision-container">
-          <div class="vision-wrapper">
-            <div class="vision-left" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
-              <div class="vision-line" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="250"></div>
 
-              <div>
-                <div class="vision-badge" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="300">
-                  <span></span>
-                  SHARED VISION
-                </div>
+<!-- HERO -->
+<section class="wl-hero">
+  <div>
+    <h1>Women Leaders Don’t Need Permission.<br>They Need Platforms.</h1>
+    <p>
+      A global ecosystem built to elevate women founders, entrepreneurs, executives, innovators, and changemakers.
+    </p>
+  </div>
 
-                <h2 data-aos="zoom-in-up" data-aos-duration="1300" data-aos-delay="400">
-                  Elevating Women
-                  <span>Building Legacy</span>
-                </h2>
-              </div>
-            </div>
-
-            <div class="vision-card" data-aos="zoom-in" data-aos-duration="1400" data-aos-delay="350">
-              <p class="vision-highlight" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="450">
-                Infinite Icons champions women who lead with resilience, innovation, and purpose.
-              </p>
-
-              <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
-                Our ecosystem increases visibility, strengthens credibility, and connects women leaders to resources and
-                communities that help ideas grow into lasting impact.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-   <!-- HERO SECTION -->
-<section class="women-hero py-24 md:py-32 bg-gradient-to-br from-[#051D49] via-[#08255e] to-[#051D49] text-white relative overflow-hidden">
-    <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
-        <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-8">
-            Women Leaders Don’t Need Permission.<br>
-            They Need Platforms.
-        </h1>
-        <p class="text-xl md:text-2xl max-w-3xl mx-auto opacity-90 leading-relaxed text-white">
-            Infinite Icons Women Leaders is a global community built to celebrate, connect, and accelerate women founders, entrepreneurs, executives, and changemakers who are redefining industries and creating meaningful impact.
-        </p>
-    </div>
+  <div>
+    <img src="/assets/images/BuildingGlobalInfluence.png" />
+  </div>
 </section>
 
-<!-- SECTION 2: The Reality -->
-<section class="py-20 bg-white">
-    <div class="max-w-4xl mx-auto px-6">
-        <h2 class="section-title text-4xl md:text-5xl font-bold text-[#051D49] mb-10">
-            The Reality of Women Leadership
-        </h2>
-        
-        <p class="text-lg md:text-xl leading-relaxed mb-10 text-gray-700">
-            Entrepreneurship was never meant to be a solo journey — especially for women.
-        </p>
-        
-        <div class="grid md:grid-cols-2 gap-10">
-            <div>
-                <p class="text-gray-600 mb-6 font-medium">Women leaders face unique challenges every day:</p>
-                <ul class="space-y-5 text-gray-700">
-                    <li class="flex items-start gap-3">
-                        <span class="text-[#D4AF37] text-xl mt-0.5">→</span>
-                        Breaking glass ceilings in male-dominated industries
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <span class="text-[#D4AF37] text-xl mt-0.5">→</span>
-                        Balancing leadership with societal expectations
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <span class="text-[#D4AF37] text-xl mt-0.5">→</span>
-                        Accessing capital and credible networks
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <span class="text-[#D4AF37] text-xl mt-0.5">→</span>
-                        Building visibility and authority
-                    </li>
-                </ul>
-            </div>
-            <div>
-                <ul class="space-y-5 text-gray-700">
-                    <li class="flex items-start gap-3">
-                        <span class="text-[#D4AF37] text-xl mt-0.5">→</span>
-                        Finding mentors who truly understand their journey
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <span class="text-[#D4AF37] text-xl mt-0.5">→</span>
-                        Scaling businesses while fostering inclusive cultures
-                    </li>
-                </ul>
-                
-                <div class="mt-12 p-8 bg-gray-50 rounded-3xl">
-                    <p class="text-lg font-medium text-[#051D49] leading-relaxed">
-                        The biggest differentiator is rarely just talent or ideas.<br>
-                        <span class="font-semibold text-[#D4AF37]">It is access</span> — to the right community, role models, opportunities, and support systems.
-                    </p>
-                </div>
-            </div>
-        </div>
+<!-- REALITY -->
+<section class="section">
+  <h2 class="title">The Reality of Women Leadership</h2>
+
+  <div class="grid-2">
+    <div>
+      <p>
+        Women entrepreneurs are shaping industries but still face structural barriers in funding, visibility, and leadership access.
+      </p>
+
+      <ul>
+        <li>Breaking industry barriers</li>
+        <li>Balancing leadership expectations</li>
+        <li>Limited access to capital</li>
+        <li>Low visibility & recognition</li>
+        <li>Finding mentors and guidance</li>
+        <li>Scaling with limited support systems</li>
+      </ul>
     </div>
+
+    <div class="card">
+      <p><b>Key Insight:</b></p>
+      <p>
+        Success is not just about talent — it is about access to networks, opportunities, and ecosystems that help ideas grow.
+      </p>
+    </div>
+  </div>
 </section>
 
-<!-- SECTION 3: What Makes This Community Different -->
-<section class="py-20 bg-gray-50">
-    <div class="max-w-5xl mx-auto px-6">
-        <h2 class="section-title text-4xl md:text-5xl font-bold text-[#051D49] mb-12 text-center">
-            What Makes This Community Different
-        </h2>
-        
-        <div class="grid md:grid-cols-2 gap-12">
-            <div class="space-y-10">
-                <div class="diff-card">
-                    <h3 class="text-2xl font-semibold mb-3 text-[#051D49]">Women-First Environment</h3>
-                    <p class="text-gray-600">A safe, ambitious, and high-caliber space designed by women, for women leaders.</p>
-                </div>
-                <div class="diff-card">
-                    <h3 class="text-2xl font-semibold mb-3 text-[#051D49]">Authentic Representation</h3>
-                    <p class="text-gray-600">Real stories of resilience, breakthroughs, failures, and victories.</p>
-                </div>
-                <div class="diff-card">
-                    <h3 class="text-2xl font-semibold mb-3 text-[#051D49]">Strategic Empowerment</h3>
-                    <p class="text-gray-600">Focused on funding access, visibility, leadership positioning, and global expansion.</p>
-                </div>
-            </div>
-            
-            <div>
-                <h3 class="text-2xl font-semibold mb-8 text-[#051D49]">Who This Network Is Built For</h3>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div class="target-card">Women Founders & Co-Founders</div>
-                    <div class="target-card">Women Entrepreneurs Scaling Businesses</div>
-                    <div class="target-card">Women CXOs & Corporate Leaders</div>
-                    <div class="target-card">Women in Tech & Innovation</div>
-                    <div class="target-card">First-Generation Women Leaders</div>
-                    <div class="target-card">Impact-Driven Changemakers</div>
-                </div>
-            </div>
-        </div>
+<!-- DIFFERENTIATOR -->
+<section class="section" style="background:#f7f7f7;">
+  <h2 class="title">What Makes Infinite Icons Different</h2>
+
+  <div class="grid-3">
+    <div class="card">
+      <h3>Women-First Ecosystem</h3>
+      <p>Designed specifically for women leaders to grow, connect, and scale globally.</p>
     </div>
+
+    <div class="card">
+      <h3>Authentic Representation</h3>
+      <p>Real leadership journeys, challenges, and achievements — not surface-level storytelling.</p>
+    </div>
+
+    <div class="card">
+      <h3>Strategic Growth</h3>
+      <p>Support in funding access, visibility building, mentorship, and global expansion.</p>
+    </div>
+  </div>
 </section>
 
-<!-- SECTION 4: Inside The Network -->
-<section class="py-20 bg-white">
-    <div class="max-w-4xl mx-auto px-6">
-        <h2 class="section-title text-4xl md:text-5xl font-bold text-[#051D49] mb-12 text-center">
-            Inside The Women Leaders Network
-        </h2>
-        
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="feature-card">
-                <h3 class="text-2xl font-semibold mb-4 text-[#051D49]">Curated Conversations</h3>
-                <p class="text-gray-600">Honest discussions on fundraising, team building, work-life integration, personal branding, and scaling.</p>
-            </div>
-            
-            <div class="feature-card">
-                <h3 class="text-2xl font-semibold mb-4 text-[#051D49]">Peer Mentorship & Introductions</h3>
-                <p class="text-gray-600">Connect with experienced women leaders, investors, partners, and advisors who understand the journey.</p>
-            </div>
-            
-            <div class="feature-card">
-                <h3 class="text-2xl font-semibold mb-4 text-[#051D49]">Visibility & Leadership Development</h3>
-                <p class="text-gray-600">Features, interviews, workshops on negotiation, executive presence, board readiness, and global spotlight opportunities.</p>
-            </div>
-        </div>
+<!-- NETWORK VALUE -->
+<section class="section">
+  <h2 class="title">Inside The Women Leaders Network</h2>
+
+  <div class="grid-3">
+    <div class="card">
+      <h3>Curated Conversations</h3>
+      <p>Discussions on leadership, scaling, branding, and real-world business challenges.</p>
     </div>
+
+    <div class="card">
+      <h3>Mentorship & Connections</h3>
+      <p>Access to experienced women leaders, investors, and industry experts.</p>
+    </div>
+
+    <div class="card">
+      <h3>Visibility & Opportunities</h3>
+      <p>Interviews, features, workshops, and global spotlight opportunities.</p>
+    </div>
+  </div>
 </section>
 
-<!-- SECTION 5: Principles & Impact -->
-<section class="py-20 bg-[#051D49] text-white">
-    <div class="max-w-4xl mx-auto px-6">
-        <h2 class="section-title text-4xl md:text-5xl font-bold mb-12 text-center text-white">
-            Our Principles & Collective Impact
-        </h2>
-        
-        <div class="grid md:grid-cols-2 gap-12">
-            <div>
-                <h3 class="text-2xl font-semibold mb-8 text-white">Community Principles</h3>
-                <ul class="space-y-8">
-                    <li class="flex gap-5">
-                        <span class="text-[#D4AF37] text-3xl">↗</span>
-                        <div>
-                            <strong class="block text-lg">Lift As We Rise</strong>
-                            Success is celebrated collectively
-                        </div>
-                    </li>
-                    <li class="flex gap-5">
-                        <span class="text-[#D4AF37] text-3xl">↗</span>
-                        <div>
-                            <strong class="block text-lg">Radical Candour</strong>
-                            Honest feedback in a supportive environment
-                        </div>
-                    </li>
-                    <li class="flex gap-5">
-                        <span class="text-[#D4AF37] text-3xl">↗</span>
-                        <div>
-                            <strong class="block text-lg">Impact Over Ego</strong>
-                            Focus on real value creation
-                        </div>
-                    </li>
-                    <li class="flex gap-5">
-                        <span class="text-[#D4AF37] text-3xl">↗</span>
-                        <div>
-                            <strong class="block text-lg">Legacy Building</strong>
-                            Creating pathways for the next generation
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            
-            <div class="flex flex-col justify-center">
-                <p class="text-xl leading-relaxed opacity-90 text-white">
-                    Women-led companies consistently outperform, yet they continue to receive less funding, visibility, and support.
-                </p>
-                <p class="mt-10 text-lg opacity-90 text-white">
-                    Infinite Icons Women Leaders Network exists to change this reality — by creating a powerful global stage where women leaders are seen, respected, heard, and empowered to build at the highest level.
-                </p>
-            </div>
-        </div>
+<!-- PRINCIPLES -->
+<section class="section dark">
+  <h2 class="title" style="color:white;">Our Principles & Impact</h2>
+
+  <div class="grid-2">
+    <div>
+      <ul>
+        <li><b>Lift As We Rise</b> — collective success over competition</li>
+        <li><b>Radical Candour</b> — honest but supportive feedback</li>
+        <li><b>Impact Over Ego</b> — focus on real value creation</li>
+        <li><b>Legacy Building</b> — long-term influence and change</li>
+      </ul>
     </div>
+
+    <div>
+      <p class="text-white">
+        Women-led businesses consistently outperform, yet still receive less funding, visibility, and structured support.
+        This ecosystem exists to change that imbalance.
+      </p>
+    </div>
+  </div>
 </section>
-    </main>
+
+<!-- CTA -->
+<section class="section dark" style="text-align:center;">
+  <h2 class="title" style="color:white;">Join The Women Leaders Movement</h2>
+
+  <p class="text-white" style="opacity:0.9;">
+    Be part of a global ecosystem where women leaders grow through visibility, mentorship, and opportunity.
+  </p>
+
+</section>
+</main>
+
 
     <div id="footer-placeholder"></div>
 
@@ -265,4 +244,3 @@
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   </body>
 </html>
-

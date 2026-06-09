@@ -1,369 +1,377 @@
-﻿﻿<!DOCTYPE html>
+﻿﻿<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Infinite Icons</title>
 
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Infinite Icons</title>
+    <link rel="stylesheet" href="assets/stylesheet/style.css" />
+    <link rel="stylesheet" href="assets/stylesheet/master.css" />
+    <link rel="stylesheet" href="assets/stylesheet/navbar.css" />
+    <link rel="stylesheet" href="assets/stylesheet/footer.css" />
+    <link rel="stylesheet" href="assets/stylesheet/spa.css" />
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
 
-  <link rel="stylesheet" href="assets/stylesheet/style.css">
-  <link rel="stylesheet" href="assets/stylesheet/master.css">
-  <link rel="stylesheet" href="assets/stylesheet/navbar.css">
-  <link rel="stylesheet" href="assets/stylesheet/footer.css">
-  <link rel="stylesheet" href="assets/stylesheet/spa.css">
+  <body>
+    <div id="navbar-placeholder"></div>
 
-  <!-- Tailwind CSS (CDN) -->
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
+    <main>
+      <!-- Header Carousel - Home Page -->
+      <div
+        id="homeCarousel"
+        class="carousel slide header-carousel"
+        data-bs-ride="carousel"
+        data-bs-interval="3000"
+      >
+        <!-- Indicators -->
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#homeCarousel"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
 
-<body>
+          <button
+            type="button"
+            data-bs-target="#homeCarousel"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
 
-  <div id="navbar-placeholder"></div>
-
-  <main>
-    <!-- Header Carousel - Home Page -->
-    <div id="homeCarousel" class="carousel slide header-carousel" data-bs-ride="carousel" data-bs-interval="3000">
-      <!-- Indicators -->
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="0" class="active" aria-current="true"
-          aria-label="Slide 1"></button>
-
-        <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-
-        <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-
-      </div>
-      <!-- =========================================================
+          <button
+            type="button"
+            data-bs-target="#homeCarousel"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <!-- =========================================================
        CAROUSEL INNER
   ========================================================= -->
-      <div class="carousel-inner">
-        <!-- =====================================================
+        <div class="carousel-inner">
+          <!-- =====================================================
          SLIDE 1
     ====================================================== -->
 
-        <div class="carousel-item active">
-          <!-- Desktop Image -->
-          <img src="assets/images/headerIndex.png" class="desktop-carousel-img" alt="Desktop Banner">
+          <div class="carousel-item active">
+            <!-- Desktop Image -->
+            <img
+              src="assets/images/indexHero.png"
+              class="desktop-carousel-img"
+              alt="Desktop Banner"
+            />
 
-          <!-- Mobile / Tablet Image -->
-          <img src="assets/images/headerInde2x.png" class="mobile-carousel-img" alt="Mobile Banner">
+            <!-- Mobile / Tablet Image -->
+            <img
+              src="assets/images/indexHeroMobile2.png"
+              class="mobile-carousel-img"
+              alt="Mobile Banner"
+            />
 
-          <div class="carousel-caption premium-carousel-caption" aria-hidden="true">
-            <h2 class="carousel-banner-heading" data-aos="fade-right">Leaders Shaping Tomorrow</h2>
-            <p class="carousel-banner-para" data-aos="fade-right">Global conversations that elevate founders, innovators, and impact creators.</p>
+            <div
+              class="carousel-caption premium-carousel-caption"
+              aria-hidden="true"
+            >
+              <h2 class="carousel-banner-heading" data-aos="fade-right">
+                Leaders Shaping Tomorrow
+              </h2>
+              <p class="carousel-banner-para" data-aos="fade-right">
+                Global conversations that elevate founders, innovators, and
+                impact creators.
+              </p>
+            </div>
           </div>
-        </div>
-        <!-- =====================================================
+          <!-- =====================================================
          SLIDE 2
     ====================================================== -->
-        <div class="carousel-item">
-          <!-- Desktop Image -->
-          <img src="assets/images/indexHero.png" class="desktop-carousel-img" alt="Desktop Banner">
-          <!-- Mobile / Tablet Image -->
-          <img src="assets/images/indexHeroMobile2.png" class="mobile-carousel-img" alt="Mobile Banner">
+          <div class="carousel-item">
+            <!-- Desktop Image -->
+            <img
+              src="assets/images/fixedBackground.png"
+              class="desktop-carousel-img"
+              alt="Desktop Banner"
+            />
+            <!-- Mobile / Tablet Image -->
+            <img
+              src="assets/images/headerInde2x.png"
+              class="mobile-carousel-img"
+              alt="Mobile Banner"
+            />
 
-          <div class="carousel-caption premium-carousel-caption" aria-hidden="true">
-            <h2 class="carousel-banner-heading" data-aos="fade-right">Curating Leadership Stories</h2>
-            <p class="carousel-banner-para" data-aos="fade-right">Discover founders and innovators redefining how progress is made.</p>
+            <div
+              class="carousel-caption premium-carousel-caption"
+              aria-hidden="true"
+            >
+              <h2 class="carousel-banner-heading" data-aos="fade-right">
+                Curating Leadership Stories
+              </h2>
+              <p class="carousel-banner-para" data-aos="fade-right">
+                Discover founders and innovators redefining how progress is
+                made.
+              </p>
+            </div>
           </div>
-        </div>
-        <!-- =====================================================
+          <!-- =====================================================
          SLIDE 3
     ====================================================== -->
-        <div class="carousel-item">
-          <!-- Desktop Image -->
-          <img src="assets/images/indexHero3.png" class="desktop-carousel-img" alt="Desktop Banner">
-          <!-- Mobile / Tablet Image -->
-          <img src="assets/images/indexHeroMobile3.png" class="mobile-carousel-img" alt="Mobile Banner">
+          <div class="carousel-item">
+            <!-- Desktop Image -->
+            <img
+              src="assets/images/indexHero3.png"
+              class="desktop-carousel-img"
+              alt="Desktop Banner"
+            />
+            <!-- Mobile / Tablet Image -->
+            <img
+              src="assets/images/indexHeroMobile3.png"
+              class="mobile-carousel-img"
+              alt="Mobile Banner"
+            />
 
-          <div class="carousel-caption premium-carousel-caption" aria-hidden="true">
-            <h2 class="carousel-banner-heading" data-aos="fade-right">Building Global Impact</h2>
-            <p class="carousel-banner-para" data-aos="fade-right">Thoughtful leaders turning conversations into measurable progress.</p>
+            <div
+              class="carousel-caption premium-carousel-caption"
+              aria-hidden="true"
+            >
+              <h2 class="carousel-banner-heading" data-aos="fade-right">
+                Building Global Impact
+              </h2>
+              <p class="carousel-banner-para" data-aos="fade-right">
+                Thoughtful leaders turning conversations into measurable
+                progress.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-      <!-- =========================================================
+        <!-- =========================================================
        PREVIOUS BUTTON
   ========================================================= -->
-      <button class="carousel-control-prev" type="button" data-bs-target="#homeCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">
-          Previous
-        </span>
-      </button>
+
+      </div>
+
       <!-- =========================================================
-       NEXT BUTTON
-  ========================================================= -->
-      <button class="carousel-control-next" type="button" data-bs-target="#homeCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">
-          Next
-        </span>
-      </button>
-    </div>
-
-
-<!-- =========================================================
      FIRST SECTION
 ========================================================= -->
 
-<section class="first-section py-5">
+      <section class="first-section py-5">
+        <!-- DECORATIVE ELEMENT -->
+        <div
+          class="golden-ornament"
+          data-aos="zoom-in"
+          data-aos-duration="1400"
+          data-aos-delay="100"
+        ></div>
 
-  <!-- DECORATIVE ELEMENT -->
-  <div 
-    class="golden-ornament"
-    data-aos="zoom-in"
-    data-aos-duration="1400"
-    data-aos-delay="100">
-  </div>
-
-  <div class="container">
-
-    <div class="row justify-content-center text-center">
-
-      <div class="col-lg-10 col-xl-9">
-
-        <!-- HERO PANEL -->
-        <div 
-          class="hero-panel"
-          data-aos="fade-up"
-          data-aos-duration="1200"
-          data-aos-offset="120">
-
-          <!-- =====================================================
+        <div class="container">
+          <div class="row justify-content-center text-center">
+            <div class="col-lg-10 col-xl-9">
+              <!-- HERO PANEL -->
+              <div
+                class="hero-panel"
+                data-aos="fade-up"
+                data-aos-duration="1200"
+                data-aos-offset="120"
+              >
+                <!-- =====================================================
                BADGE
           ====================================================== -->
 
-          <div 
-            class="hero-badge"
-            data-aos="fade-down"
-            data-aos-duration="1000"
-            data-aos-delay="100">
+                <div
+                  class="hero-badge"
+                  data-aos="fade-down"
+                  data-aos-duration="1000"
+                  data-aos-delay="100"
+                >
+                  <span>✦</span>
 
-            <span>✦</span>
+                  GLOBAL LEADERSHIP PLATFORM
+                </div>
 
-            GLOBAL LEADERSHIP PLATFORM
-
-          </div>
-
-          <!-- =====================================================
+                <!-- =====================================================
                MAIN HEADING
           ====================================================== -->
 
-          <h1 
-            class="display-4 fw-bold mb-4"
-            data-aos="zoom-in"
-            data-aos-duration="1200"
-            data-aos-delay="200">
+                <h1
+                  class="display-4 fw-bold mb-4"
+                  data-aos="zoom-in"
+                  data-aos-duration="1200"
+                  data-aos-delay="200"
+                >
+                  The Global Platform for<br />
+                  <span> Leaders Shaping Tomorrow </span>
 
-            The Global Platform for<br>
-            <span>
+                  <p class="lead mb-5 px-lg-5" style="display: none"></p>
+                </h1>
 
-              Leaders Shaping Tomorrow
-            </span>
-
-            <p class="lead mb-5 px-lg-5" style="display:none"></p>
-
-          </h1>
-
-          <!-- =====================================================
+                <!-- =====================================================
                PARAGRAPH 1
           ====================================================== -->
 
-          <p 
-            class="lead mb-5 px-lg-5"
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            data-aos-delay="300">
+                <p
+                  class="lead mb-5 px-lg-5"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-delay="300"
+                >
+                  <strong>Infinite Icons</strong>
+                  is more than a platform — it is a global leadership,
+                  influence, and business ecosystem created to recognize,
+                  empower, and elevate the world’s most impactful founders,
+                  entrepreneurs, innovators, women leaders, startups,
+                  changemakers, creators, and enterprise visionaries.
+                </p>
 
-
-            <strong>Infinite Icons</strong>
-            is more than a platform — it is a global leadership,
-            influence, and business ecosystem created to recognize,
-            empower, and elevate the world’s most impactful founders,
-            entrepreneurs, innovators, women leaders, startups,
-            changemakers, creators, and enterprise visionaries.
-
-          </p>
-
-          <!-- =====================================================
+                <!-- =====================================================
                PARAGRAPH 2
           ====================================================== -->
 
-          <p 
-            class="lead mb-5 px-lg-5"
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            data-aos-delay="450">
+                <p
+                  class="lead mb-5 px-lg-5"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-delay="450"
+                >
+                  In an era where influence drives economies, innovation shapes
+                  societies, and leadership defines the future, Infinite Icons
+                  stands as a powerful bridge connecting exceptional
+                  individuals, emerging enterprises, disruptive startups,
+                  industry experts, investors, policymakers, corporations, and
+                  global communities under one transformative ecosystem.
+                </p>
 
-            In an era where influence drives economies,
-            innovation shapes societies, and leadership defines
-            the future, Infinite Icons stands as a powerful bridge
-            connecting exceptional individuals, emerging enterprises,
-            disruptive startups, industry experts, investors,
-            policymakers, corporations, and global communities
-            under one transformative ecosystem.
-
-          </p>
-
-          <!-- =====================================================
+                <!-- =====================================================
                PARAGRAPH 3
           ====================================================== -->
 
-          <p 
-            class="lead mb-0 px-lg-5"
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            data-aos-delay="600">
+                <p
+                  class="lead mb-0 px-lg-5"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-delay="600"
+                >
+                  At its core, Infinite Icons exists to spotlight those who dare
+                  to think differently, build fearlessly, lead purposefully, and
+                  create meaningful impact across industries, geographies, and
+                  generations.
+                </p>
 
-            At its core, Infinite Icons exists to spotlight
-            those who dare to think differently, build fearlessly,
-            lead purposefully, and create meaningful impact across
-            industries, geographies, and generations.
-
-          </p>
-
-          <!-- =====================================================
+                <!-- =====================================================
                CTA BUTTONS
           ====================================================== -->
 
-          <div 
-            class="cta-grid mt-4"
-            data-aos="zoom-in-up"
-            data-aos-duration="1200"
-            data-aos-delay="750">
-
-            <a href="#" class="btn btn-primary">
-              Get Featured
-            </a>
-
-            <a href="#" class="btn btn-outline-primary">
-              Join the Network
-            </a>
-
-            <a href="#" class="btn btn-outline-primary">
-              Nominate a Leader
-            </a>
 
 
+              </div>
+            </div>
           </div>
-
         </div>
+      </section>
 
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-   <!-- =========================================================
+      <!-- =========================================================
      ABOUT SECTION LANDING PAGE
 ========================================================= -->
 
-<section 
-  class="about-infinite-icons"
-  data-aos="fade-up"
-  data-aos-duration="1200">
-
-  <div class="about-container">
-
-    <!-- =====================================================
+      <section
+        class="about-infinite-icons"
+        data-aos="fade-up"
+        data-aos-duration="1200"
+      >
+        <div class="about-container">
+          <!-- =====================================================
          BADGE
     ====================================================== -->
 
-    <div 
-      class="about-badge"
-      data-aos="fade-down"
-      data-aos-duration="1000"
-      data-aos-delay="100">
+          <div
+            class="about-badge"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+            data-aos-delay="100"
+          >
+            <span></span>
 
-      <span></span>
+            ABOUT INFINITE ICONS
+          </div>
 
-      ABOUT INFINITE ICONS
-
-    </div>
-
-    <!-- =====================================================
+          <!-- =====================================================
          GRID
     ====================================================== -->
 
-    <div class="about-grid">
-
-      <!-- =====================================================
+          <div class="about-grid">
+            <!-- =====================================================
            LEFT CONTENT
       ====================================================== -->
 
-      <div 
-        class="about-content"
-        data-aos="fade-up"
-        data-aos-duration="1200"
-        data-aos-delay="200">
+            <div
+              class="about-content"
+              data-aos="fade-up"
+              data-aos-duration="1200"
+              data-aos-delay="200"
+            >
+              <!-- HEADING -->
+              <h2
+                data-aos="zoom-in"
+                data-aos-duration="1200"
+                data-aos-delay="250"
+              >
+                A Global Ecosystem for Visionaries, Builders & Industry Leaders
+              </h2>
 
-        <!-- HEADING -->
-        <h2
-          data-aos="zoom-in"
-          data-aos-duration="1200"
-          data-aos-delay="250">
+              <!-- INTRO -->
+              <p
+                class="about-intro"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="350"
+              >
+                Infinite Icons is more than a platform — it is a global
+                leadership, influence, and business ecosystem created to
+                recognize, empower, and elevate the world’s most impactful
+                founders, entrepreneurs, innovators, women leaders, startups,
+                changemakers, creators, and enterprise visionaries.
+              </p>
 
-          A Global Ecosystem for
+              <!-- PARAGRAPH 2 -->
+              <p
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="450"
+              >
+                In an era where influence drives economies, innovation shapes
+                societies, and leadership defines the future, Infinite Icons
+                stands as a powerful bridge connecting exceptional individuals,
+                emerging enterprises, disruptive startups, industry experts,
+                investors, policymakers, corporations, and global communities
+                under one transformative ecosystem.
+              </p>
 
-          
-            Visionaries, Builders & Industry Leaders
- 
+              <!-- PARAGRAPH 3 -->
+              <p
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="550"
+              >
+                At its core, Infinite Icons exists to spotlight those who dare
+                to think differently, build fearlessly, lead purposefully, and
+                create meaningful impact across industries, geographies, and
+                generations.
+              </p>
 
-        </h2>
-
-        <!-- INTRO -->
-        <p 
-          class="about-intro"
-          data-aos="fade-up"
-          data-aos-duration="1000"
-          data-aos-delay="350">
-
-          Infinite Icons is more than a platform — it is a global leadership,
-          influence, and business ecosystem created to recognize, empower,
-          and elevate the world’s most impactful founders, entrepreneurs,
-          innovators, women leaders, startups, changemakers, creators,
-          and enterprise visionaries.
-
-        </p>
-
-        <!-- PARAGRAPH 2 -->
-        <p
-          data-aos="fade-up"
-          data-aos-duration="1000"
-          data-aos-delay="450">
-
-          In an era where influence drives economies, innovation shapes
-          societies, and leadership defines the future, Infinite Icons stands
-          as a powerful bridge connecting exceptional individuals, emerging
-          enterprises, disruptive startups, industry experts, investors,
-          policymakers, corporations, and global communities under one
-          transformative ecosystem.
-
-        </p>
-
-        <!-- PARAGRAPH 3 -->
-        <p
-          data-aos="fade-up"
-          data-aos-duration="1000"
-          data-aos-delay="550">
-
-          At its core, Infinite Icons exists to spotlight those who dare to
-          think differently, build fearlessly, lead purposefully, and create
-          meaningful impact across industries, geographies, and generations.
-
-        </p>
-
-        <!-- BUTTONS -->
-        <!-- <div 
+              <!-- BUTTONS -->
+              <!-- <div 
           class="about-buttons"
           data-aos="zoom-in-up"
           data-aos-duration="1200"
@@ -378,648 +386,589 @@
           </a>
 
         </div> -->
+            </div>
 
-      </div>
-
-      <!-- =====================================================
+            <!-- =====================================================
            RIGHT VISUAL SIDE
       ====================================================== -->
 
-      <div 
-        class="about-visual"
-        data-aos="zoom-in"
-        data-aos-duration="1400"
-        data-aos-delay="250">
+            <div
+              class="about-visual"
+              data-aos="zoom-in"
+              data-aos-duration="1400"
+              data-aos-delay="250"
+            >
+              <!-- GLOW EFFECT -->
+              <div
+                class="glow glow-1"
+                data-aos="zoom-in"
+                data-aos-duration="1800"
+                data-aos-delay="100"
+              ></div>
 
-        <!-- GLOW EFFECT -->
-        <div 
-          class="glow glow-1"
-          data-aos="zoom-in"
-          data-aos-duration="1800"
-          data-aos-delay="100">
-        </div>
+              <div
+                class="glow glow-2"
+                data-aos="zoom-in"
+                data-aos-duration="1800"
+                data-aos-delay="300"
+              ></div>
 
-        <div 
-          class="glow glow-2"
-          data-aos="zoom-in"
-          data-aos-duration="1800"
-          data-aos-delay="300">
-        </div>
+              <!-- CARD 1 -->
+              <div
+                class="stats-card card-1"
+                data-aos="fade-down"
+                data-aos-duration="1200"
+                data-aos-delay="350"
+              >
+                <h3>Global Network</h3>
 
-        <!-- CARD 1 -->
-        <div 
-          class="stats-card card-1"
-          data-aos="fade-down"
-          data-aos-duration="1200"
-          data-aos-delay="350">
+                <p>Connecting leaders, innovators & enterprises worldwide.</p>
+              </div>
 
-          <h3>
-            Global Network
-          </h3>
+              <!-- CARD 2 -->
+              <div
+                class="stats-card card-2"
+                data-aos="fade-up"
+                data-aos-duration="1200"
+                data-aos-delay="500"
+              >
+                <h3>Innovation Driven</h3>
 
-          <p>
-            Connecting leaders, innovators & enterprises worldwide.
-          </p>
+                <p>Empowering startups, creators & disruptive thinkers.</p>
+              </div>
 
-        </div>
+              <!-- CENTER CIRCLE -->
+              <div
+                class="center-circle"
+                data-aos="zoom-in"
+                data-aos-duration="1600"
+                data-aos-delay="450"
+              >
+                <div class="inner-circle">
+                  <h4>Infinite</h4>
 
-        <!-- CARD 2 -->
-        <div 
-          class="stats-card card-2"
-          data-aos="fade-up"
-          data-aos-duration="1200"
-          data-aos-delay="500">
-
-          <h3>
-            Innovation Driven
-          </h3>
-
-          <p>
-            Empowering startups, creators & disruptive thinkers.
-          </p>
-
-        </div>
-
-        <!-- CENTER CIRCLE -->
-        <div 
-          class="center-circle"
-          data-aos="zoom-in"
-          data-aos-duration="1600"
-          data-aos-delay="450">
-
-          <div class="inner-circle">
-
-            <h4>
-              Infinite
-            </h4>
-
-            <span>
-              Icons
-            </span>
-
+                  <span> Icons </span>
+                </div>
+              </div>
+            </div>
           </div>
-
         </div>
+      </section>
 
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
- <!-- =========================================================
+      <!-- =========================================================
      OUR VISION SECTION - EDITORIAL STYLE
 ========================================================= -->
 
-<section 
-  class="vision-section"
-  data-aos="fade-up"
-  data-aos-duration="1200">
-
-  <!-- =====================================================
+      <section
+        class="vision-section"
+        data-aos="fade-up"
+        data-aos-duration="1200"
+      >
+        <!-- =====================================================
        BACKGROUND TEXT
   ====================================================== -->
 
-  <h1 
-    class="vision-bg-text"
-    data-aos="zoom-in"
-    data-aos-duration="1800"
-    data-aos-delay="100">
+        <h1
+          class="vision-bg-text"
+          data-aos="zoom-in"
+          data-aos-duration="1800"
+          data-aos-delay="100"
+        >
+          VISION
+        </h1>
 
-    VISION
-
-  </h1>
-
-  <div class="vision-container">
-
-    <div class="vision-wrapper">
-
-      <!-- =====================================================
+        <div class="vision-container">
+          <div class="vision-wrapper">
+            <!-- =====================================================
            LEFT SIDE
       ====================================================== -->
 
-      <div 
-        class="vision-left"
-        data-aos="fade-up"
-        data-aos-duration="1200"
-        data-aos-delay="200">
+            <div
+              class="vision-left"
+              data-aos="fade-up"
+              data-aos-duration="1200"
+              data-aos-delay="200"
+            >
+              <!-- LINE -->
+              <div
+                class="vision-line"
+                data-aos="zoom-in"
+                data-aos-duration="1000"
+                data-aos-delay="250"
+              ></div>
 
-        <!-- LINE -->
-        <div 
-          class="vision-line"
-          data-aos="zoom-in"
-          data-aos-duration="1000"
-          data-aos-delay="250">
-        </div>
+              <div>
+                <!-- BADGE -->
+                <div
+                  class="vision-badge"
+                  data-aos="fade-down"
+                  data-aos-duration="1000"
+                  data-aos-delay="300"
+                >
+                  <span></span>
 
-        <div>
+                  OUR VISION
+                </div>
 
-          <!-- BADGE -->
-          <div 
-            class="vision-badge"
-            data-aos="fade-down"
-            data-aos-duration="1000"
-            data-aos-delay="300">
+                <!-- HEADING -->
+                <h2
+                  data-aos="zoom-in-up"
+                  data-aos-duration="1300"
+                  data-aos-delay="400"
+                >
+                  Creating A Future Where
 
-            <span></span>
+                  <span> Global Leaders Rise Without Limits </span>
+                </h2>
+              </div>
+            </div>
 
-            OUR VISION
-
-          </div>
-
-          <!-- HEADING -->
-          <h2
-            data-aos="zoom-in-up"
-            data-aos-duration="1300"
-            data-aos-delay="400">
-
-            Creating A Future Where
-
-            <span>
-              Global Leaders Rise Without Limits
-            </span>
-
-          </h2>
-
-        </div>
-
-      </div>
-
-      <!-- =====================================================
+            <!-- =====================================================
            RIGHT SIDE CARD
       ====================================================== -->
 
-      <div 
-        class="vision-card"
-        data-aos="zoom-in"
-        data-aos-duration="1400"
-        data-aos-delay="350">
+            <div
+              class="vision-card"
+              data-aos="zoom-in"
+              data-aos-duration="1400"
+              data-aos-delay="350"
+            >
+              <!-- HIGHLIGHT TEXT -->
+              <p
+                class="vision-highlight"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="450"
+              >
+                To become the world’s most influential ecosystem for leadership
+                visibility, entrepreneurial growth, innovation recognition,
+                strategic collaborations, and global impact creation.
+              </p>
 
-        <!-- HIGHLIGHT TEXT -->
-        <p 
-          class="vision-highlight"
-          data-aos="fade-up"
-          data-aos-duration="1000"
-          data-aos-delay="450">
+              <!-- DESCRIPTION -->
+              <p
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="600"
+              >
+                We envision a future where visionary leaders — regardless of
+                their background, geography, gender, or stage of growth — are
+                given the visibility, credibility, opportunities, and ecosystem
+                support they deserve to scale their influence and transform
+                industries worldwide.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-          To become the world’s most influential ecosystem for
-          leadership visibility, entrepreneurial growth,
-          innovation recognition, strategic collaborations,
-          and global impact creation.
-
-        </p>
-
-        <!-- DESCRIPTION -->
-        <p
-          data-aos="fade-up"
-          data-aos-duration="1000"
-          data-aos-delay="600">
-
-          We envision a future where visionary leaders —
-          regardless of their background, geography, gender,
-          or stage of growth — are given the visibility,
-          credibility, opportunities, and ecosystem support
-          they deserve to scale their influence and transform
-          industries worldwide.
-
-        </p>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- =========================================================
+      <!-- =========================================================
      MISSION SECTION - MODERN DARK STRATEGIC LAYOUT
 ========================================================= -->
 
-<section 
-  class="mission-section"
-  data-aos="fade-up"
-  data-aos-duration="1200">
-
-  <div class="mission-container">
-
-    <!-- =====================================================
+      <section
+        class="mission-section"
+        data-aos="fade-up"
+        data-aos-duration="1200"
+      >
+        <div class="mission-container">
+          <!-- =====================================================
          TOP AREA
     ====================================================== -->
 
-    <div 
-      class="mission-top"
-      data-aos="fade-down"
-      data-aos-duration="1100">
+          <div
+            class="mission-top"
+            data-aos="fade-down"
+            data-aos-duration="1100"
+          >
+            <!-- TAG -->
+            <div
+              class="mission-tag"
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+              data-aos-delay="100"
+            >
+              OUR MISSION
+            </div>
 
-      <!-- TAG -->
-      <div 
-        class="mission-tag"
-        data-aos="zoom-in"
-        data-aos-duration="1000"
-        data-aos-delay="100">
+            <!-- HEADING -->
+            <h2
+              data-aos="zoom-in-up"
+              data-aos-duration="1300"
+              data-aos-delay="250"
+            >
+              Building A Global Platform For Visionary Leaders &
+              Transformational Businesses
+            </h2>
+          </div>
 
-        OUR MISSION
-
-      </div>
-
-      <!-- HEADING -->
-      <h2
-        data-aos="zoom-in-up"
-        data-aos-duration="1300"
-        data-aos-delay="250">
-
-        Building A Global Platform
-        For Visionary Leaders &
-        Transformational Businesses
-
-      </h2>
-
-    </div>
-
-    <!-- =====================================================
+          <!-- =====================================================
          MAIN GRID
     ====================================================== -->
 
-    <div class="mission-grid">
-
-      <!-- =====================================================
+          <div class="mission-grid">
+            <!-- =====================================================
            LEFT CONTENT
       ====================================================== -->
 
-      <div 
-        class="mission-left"
-        data-aos="fade-up"
-        data-aos-duration="1200"
-        data-aos-delay="200">
+            <div
+              class="mission-left"
+              data-aos="fade-up"
+              data-aos-duration="1200"
+              data-aos-delay="200"
+            >
+              <!-- INTRO -->
+              <p
+                class="mission-intro"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="300"
+              >
+                Our mission is to create a powerful international platform that
+                empowers leaders, entrepreneurs, startups, enterprises, and
+                innovators to build influence, meaningful connections, and
+                sustainable growth opportunities worldwide.
+              </p>
 
-        <!-- INTRO -->
-        <p 
-          class="mission-intro"
-          data-aos="fade-up"
-          data-aos-duration="1000"
-          data-aos-delay="300">
-
-          Our mission is to create a powerful international platform
-          that empowers leaders, entrepreneurs, startups, enterprises,
-          and innovators to build influence, meaningful connections,
-          and sustainable growth opportunities worldwide.
-
-        </p>
-
-        <!-- =================================================
+              <!-- =================================================
              MISSION POINTS
         ================================================== -->
 
-        <div class="mission-points">
+              <div class="mission-points">
+                <!-- ITEM 01 -->
+                <div
+                  class="mission-item"
+                  data-aos="zoom-in-up"
+                  data-aos-duration="1000"
+                  data-aos-delay="100"
+                >
+                  <span>01</span>
 
-          <!-- ITEM 01 -->
-          <div 
-            class="mission-item"
-            data-aos="zoom-in-up"
-            data-aos-duration="1000"
-            data-aos-delay="100">
+                  <p>Recognizes exceptional leaders and impactful businesses</p>
+                </div>
 
-            <span>01</span>
+                <!-- ITEM 02 -->
+                <div
+                  class="mission-item"
+                  data-aos="zoom-in-up"
+                  data-aos-duration="1000"
+                  data-aos-delay="180"
+                >
+                  <span>02</span>
 
-            <p>
-              Recognizes exceptional leaders and impactful businesses
-            </p>
+                  <p>Amplifies founder stories and entrepreneurial journeys</p>
+                </div>
 
-          </div>
+                <!-- ITEM 03 -->
+                <div
+                  class="mission-item"
+                  data-aos="zoom-in-up"
+                  data-aos-duration="1000"
+                  data-aos-delay="260"
+                >
+                  <span>03</span>
 
-          <!-- ITEM 02 -->
-          <div 
-            class="mission-item"
-            data-aos="zoom-in-up"
-            data-aos-duration="1000"
-            data-aos-delay="180">
+                  <p>Builds meaningful business and corporate connections</p>
+                </div>
 
-            <span>02</span>
+                <!-- ITEM 04 -->
+                <div
+                  class="mission-item"
+                  data-aos="zoom-in-up"
+                  data-aos-duration="1000"
+                  data-aos-delay="340"
+                >
+                  <span>04</span>
 
-            <p>
-              Amplifies founder stories and entrepreneurial journeys
-            </p>
+                  <p>
+                    Enables collaboration between startups, investors &
+                    institutions
+                  </p>
+                </div>
 
-          </div>
+                <!-- ITEM 05 -->
+                <div
+                  class="mission-item"
+                  data-aos="zoom-in-up"
+                  data-aos-duration="1000"
+                  data-aos-delay="420"
+                >
+                  <span>05</span>
 
-          <!-- ITEM 03 -->
-          <div 
-            class="mission-item"
-            data-aos="zoom-in-up"
-            data-aos-duration="1000"
-            data-aos-delay="260">
+                  <p>
+                    Promotes innovation, diversity, and inclusive leadership
+                  </p>
+                </div>
 
-            <span>03</span>
+                <!-- ITEM 06 -->
+                <div
+                  class="mission-item"
+                  data-aos="zoom-in-up"
+                  data-aos-duration="1000"
+                  data-aos-delay="500"
+                >
+                  <span>06</span>
 
-            <p>
-              Builds meaningful business and corporate connections
-            </p>
+                  <p>
+                    Creates opportunities for growth, partnerships & expansion
+                  </p>
+                </div>
+              </div>
+            </div>
 
-          </div>
-
-          <!-- ITEM 04 -->
-          <div 
-            class="mission-item"
-            data-aos="zoom-in-up"
-            data-aos-duration="1000"
-            data-aos-delay="340">
-
-            <span>04</span>
-
-            <p>
-              Enables collaboration between startups,
-              investors & institutions
-            </p>
-
-          </div>
-
-          <!-- ITEM 05 -->
-          <div 
-            class="mission-item"
-            data-aos="zoom-in-up"
-            data-aos-duration="1000"
-            data-aos-delay="420">
-
-            <span>05</span>
-
-            <p>
-              Promotes innovation, diversity,
-              and inclusive leadership
-            </p>
-
-          </div>
-
-          <!-- ITEM 06 -->
-          <div 
-            class="mission-item"
-            data-aos="zoom-in-up"
-            data-aos-duration="1000"
-            data-aos-delay="500">
-
-            <span>06</span>
-
-            <p>
-              Creates opportunities for growth,
-              partnerships & expansion
-            </p>
-
-          </div>
-
-        </div>
-
-      </div>
-
-      <!-- =====================================================
+            <!-- =====================================================
            RIGHT VISUAL CARD
       ====================================================== -->
 
-      <div 
-        class="mission-right"
-        data-aos="zoom-in"
-        data-aos-duration="1400"
-        data-aos-delay="300">
+            <div
+              class="mission-right"
+              data-aos="zoom-in"
+              data-aos-duration="1400"
+              data-aos-delay="300"
+            >
+              <div class="mission-card">
+                <!-- HEADING -->
+                <h3
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-delay="400"
+                >
+                  Infinite Icons Represents The New Generation Of Leadership
+                </h3>
 
-        <div class="mission-card">
-
-          <!-- HEADING -->
-          <h3
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            data-aos-delay="400">
-
-            Infinite Icons Represents
-            The New Generation
-            Of Leadership
-
-          </h3>
-
-          <!-- =================================================
+                <!-- =================================================
                LEADERSHIP TAGS
           ================================================== -->
 
-          <div class="leadership-tags">
+                <div class="leadership-tags">
+                  <span
+                    data-aos="zoom-in"
+                    data-aos-duration="900"
+                    data-aos-delay="450"
+                  >
+                    Vision-Driven
+                  </span>
 
-            <span
-              data-aos="zoom-in"
-              data-aos-duration="900"
-              data-aos-delay="450">
-              Vision-Driven
-            </span>
+                  <span
+                    data-aos="zoom-in"
+                    data-aos-duration="900"
+                    data-aos-delay="500"
+                  >
+                    Innovation-Led
+                  </span>
 
-            <span
-              data-aos="zoom-in"
-              data-aos-duration="900"
-              data-aos-delay="500">
-              Innovation-Led
-            </span>
+                  <span
+                    data-aos="zoom-in"
+                    data-aos-duration="900"
+                    data-aos-delay="550"
+                  >
+                    Purpose-Oriented
+                  </span>
 
-            <span
-              data-aos="zoom-in"
-              data-aos-duration="900"
-              data-aos-delay="550">
-              Purpose-Oriented
-            </span>
+                  <span
+                    data-aos="zoom-in"
+                    data-aos-duration="900"
+                    data-aos-delay="600"
+                  >
+                    Globally Connected
+                  </span>
 
-            <span
-              data-aos="zoom-in"
-              data-aos-duration="900"
-              data-aos-delay="600">
-              Globally Connected
-            </span>
+                  <span
+                    data-aos="zoom-in"
+                    data-aos-duration="900"
+                    data-aos-delay="650"
+                  >
+                    Impact-Focused
+                  </span>
 
-            <span
-              data-aos="zoom-in"
-              data-aos-duration="900"
-              data-aos-delay="650">
-              Impact-Focused
-            </span>
+                  <span
+                    data-aos="zoom-in"
+                    data-aos-duration="900"
+                    data-aos-delay="700"
+                  >
+                    Future-Ready
+                  </span>
+                </div>
 
-            <span
-              data-aos="zoom-in"
-              data-aos-duration="900"
-              data-aos-delay="700">
-              Future-Ready
-            </span>
-
+                <!-- DESCRIPTION -->
+                <p
+                  data-aos="fade-up"
+                  data-aos-duration="1100"
+                  data-aos-delay="750"
+                >
+                  We celebrate leaders who are not only building profitable
+                  enterprises but are also creating employment, empowering
+                  communities, driving innovation, solving real-world
+                  challenges, and contributing toward economic and social
+                  transformation.
+                </p>
+              </div>
+            </div>
           </div>
-
-          <!-- DESCRIPTION -->
-          <p
-            data-aos="fade-up"
-            data-aos-duration="1100"
-            data-aos-delay="750">
-
-            We celebrate leaders who are not only building profitable
-            enterprises but are also creating employment, empowering
-            communities, driving innovation, solving real-world challenges,
-            and contributing toward economic and social transformation.
-
-          </p>
-
         </div>
+      </section>
 
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- =========================================================
+      <!-- =========================================================
      FIXED PARALLAX SECTION
 ========================================================= -->
 
-<section class="fixed-showcase">
+      <section class="fixed-showcase">
+        <!-- BACKGROUND LAYER -->
+        <div class="bg-image"></div>
 
-  <!-- BACKGROUND LAYER -->
-  <div class="bg-image"></div>
+        <!-- OVERLAY -->
+        <div class="fixed-overlay"></div>
 
-  <!-- OVERLAY -->
-  <div class="fixed-overlay"></div>
+        <!-- GLOW EFFECTS -->
+        <div class="fixed-glow fixed-glow-1"></div>
+        <div class="fixed-glow fixed-glow-2"></div>
 
-  <!-- GLOW EFFECTS -->
-  <div class="fixed-glow fixed-glow-1"></div>
-  <div class="fixed-glow fixed-glow-2"></div>
+        <!-- CONTENT -->
+        <div class="fixed-content">
+          <div class="fixed-tag" data-aos="zoom-in">
+            GLOBAL LEADERSHIP MOVEMENT
+          </div>
 
-  <!-- CONTENT -->
-  <div class="fixed-content">
+          <h2 data-aos="fade-up" data-aos-delay="100">
+            Inspiring Leaders to <br />
+            Build Global Impact
+          </h2>
+<!-- 
+          <p data-aos="fade-up" data-aos-delay="250">
+            Infinite Icons connects founders, innovators, entrepreneurs,
+            changemakers, and enterprises through a future-driven ecosystem
+            designed for visibility, growth, influence, and transformation.
+          </p> -->
+        </div>
+      </section>
 
-    <div class="fixed-tag" data-aos="zoom-in">
-      GLOBAL LEADERSHIP MOVEMENT
-    </div>
-
-    <h2 data-aos="fade-up" data-aos-delay="100">
-      Inspiring Leaders to <br>
-      Build Global Impact
-    </h2>
-
-    <p data-aos="fade-up" data-aos-delay="250">
-      Infinite Icons connects founders, innovators,
-      entrepreneurs, changemakers, and enterprises
-      through a future-driven ecosystem designed
-      for visibility, growth, influence, and transformation.
-    </p>
-
-  </div>
-
-</section>
-   
- <!-- =========================================================
+      <!-- =========================================================
      WHO WE SPOTLIGHT SECTION
 ========================================================= -->
 
-<section class="spotlight-section" data-aos="fade-up" data-aos-duration="1200">
+      <section
+        class="spotlight-section"
+        data-aos="fade-up"
+        data-aos-duration="1200"
+      >
+        <div class="spotlight-container">
+          <!-- TOP -->
+          <div
+            class="spotlight-top"
+            data-aos="fade-down"
+            data-aos-duration="1100"
+          >
+            <div class="spotlight-tag">WHO WE SPOTLIGHT</div>
 
-  <div class="spotlight-container">
+            <h2>
+              The People &amp; Organizations
+              <span>Shaping The Future</span>
+            </h2>
 
-    <!-- TOP -->
-    <div class="spotlight-top" data-aos="fade-down" data-aos-duration="1100">
+            <p>
+              Infinite Icons proudly showcases visionary founders, innovators,
+              enterprises, changemakers, ecosystem builders, and global leaders
+              driving transformation across industries.
+            </p>
+          </div>
 
-      <div class="spotlight-tag">
-        WHO WE SPOTLIGHT
-      </div>
+          <!-- GRID -->
+          <div class="spotlight-grid">
+            <div class="spotlight-card">
+              <div class="spotlight-number">01</div>
+              <h3>Founders & Entrepreneurs</h3>
+              <p>
+                Visionaries building disruptive businesses, scalable
+                enterprises, and industry-defining solutions.
+              </p>
+            </div>
 
-      <h2>
-        The People &amp; Organizations
-        <span>Shaping The Future</span>
-      </h2>
+            <div class="spotlight-card">
+              <div class="spotlight-number">02</div>
+              <h3>Women Leaders & Entrepreneurs</h3>
+              <p>
+                Women transforming industries, breaking barriers, creating
+                opportunities, and leading with resilience.
+              </p>
+            </div>
 
-      <p>
-        Infinite Icons proudly showcases visionary founders,
-        innovators, enterprises, changemakers, ecosystem builders,
-        and global leaders driving transformation across industries.
-      </p>
+            <div class="spotlight-card">
+              <div class="spotlight-number">03</div>
+              <h3>Startups & Emerging Businesses</h3>
+              <p>
+                Innovative startups and growth-stage companies building the
+                future through creativity and technology.
+              </p>
+            </div>
 
-    </div>
+            <div class="spotlight-card">
+              <div class="spotlight-number">04</div>
+              <h3>Corporate & Enterprise Leaders</h3>
+              <p>
+                Executives and decision-makers driving transformation,
+                innovation, and organizational excellence globally.
+              </p>
+            </div>
 
-    <!-- GRID -->
-    <div class="spotlight-grid">
+            <div class="spotlight-card">
+              <div class="spotlight-number">05</div>
+              <h3>Innovators & Technology Leaders</h3>
+              <p>
+                AI pioneers, digital creators, and future-focused thinkers
+                redefining industries through innovation.
+              </p>
+            </div>
 
-      <div class="spotlight-card">
-        <div class="spotlight-number">01</div>
-        <h3>Founders & Entrepreneurs</h3>
-        <p>Visionaries building disruptive businesses, scalable enterprises, and industry-defining solutions.</p>
-      </div>
+            <div class="spotlight-card">
+              <div class="spotlight-number">06</div>
+              <h3>Changemakers & Impact Creators</h3>
+              <p>
+                Leaders creating measurable impact in sustainability, education,
+                healthcare, inclusion, and empowerment.
+              </p>
+            </div>
 
-      <div class="spotlight-card">
-        <div class="spotlight-number">02</div>
-        <h3>Women Leaders & Entrepreneurs</h3>
-        <p>Women transforming industries, breaking barriers, creating opportunities, and leading with resilience.</p>
-      </div>
+            <div class="spotlight-card spotlight-large">
+              <div class="spotlight-number">07</div>
+              <h3>Investors, Mentors & Ecosystem Builders</h3>
+              <p>
+                People and institutions supporting entrepreneurship, innovation,
+                leadership development, funding, mentorship, and business
+                acceleration worldwide.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
-      <div class="spotlight-card">
-        <div class="spotlight-number">03</div>
-        <h3>Startups & Emerging Businesses</h3>
-        <p>Innovative startups and growth-stage companies building the future through creativity and technology.</p>
-      </div>
+    <div id="footer-placeholder"></div>
 
-      <div class="spotlight-card">
-        <div class="spotlight-number">04</div>
-        <h3>Corporate & Enterprise Leaders</h3>
-        <p>Executives and decision-makers driving transformation, innovation, and organizational excellence globally.</p>
-      </div>
-
-      <div class="spotlight-card">
-        <div class="spotlight-number">05</div>
-        <h3>Innovators & Technology Leaders</h3>
-        <p>AI pioneers, digital creators, and future-focused thinkers redefining industries through innovation.</p>
-      </div>
-
-      <div class="spotlight-card">
-        <div class="spotlight-number">06</div>
-        <h3>Changemakers & Impact Creators</h3>
-        <p>Leaders creating measurable impact in sustainability, education, healthcare, inclusion, and empowerment.</p>
-      </div>
-
-      <div class="spotlight-card spotlight-large">
-        <div class="spotlight-number">07</div>
-        <h3>Investors, Mentors & Ecosystem Builders</h3>
-        <p>
-          People and institutions supporting entrepreneurship, innovation, leadership development,
-          funding, mentorship, and business acceleration worldwide.
-        </p>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-  </main>
-
-  <div id="footer-placeholder"></div>
-
-<!-- =========================================================
+    <!-- =========================================================
      AOS CSS
 ========================================================= -->
-<link rel="stylesheet"
-href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+    />
 
-<!-- =========================================================
+    <!-- =========================================================
      YOUR CUSTOM SCRIPTS
 ========================================================= -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script src="assets/script/spa.js" defer></script>
-<script src="assets/script/navbar.js" defer></script>
-<script src="assets/script/footer.js" defer></script>
-<script src="assets/script/script.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="assets/script/spa.js" defer></script>
+    <script src="assets/script/navbar.js" defer></script>
+    <script src="assets/script/footer.js" defer></script>
+    <script src="assets/script/script.js" defer></script>
 
-<!-- =========================================================
+    <!-- =========================================================
      BOOTSTRAP
 ========================================================= -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-<!-- =========================================================
+    <!-- =========================================================
      AOS LIBRARY
 ========================================================= -->
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-
-
-</body>
-
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  </body>
 </html>

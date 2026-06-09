@@ -20,18 +20,18 @@
 // Common Utilities Section
 // =========================================================
 
-const founderProfiles = [
-  { name: 'Ava Clarke', role: 'Founder & CEO', company: 'Helio Ventures', category: 'Founder Interview' },
-  { name: 'Noah Reed', role: 'Co-founder & Chief Product Officer', company: 'Nexera', category: 'Startup Journey' },
-  { name: 'Maya Reeves', role: 'Founder & Managing Partner', company: 'Lumen Labs', category: 'Leadership Profile' },
-  { name: 'Ezra Chen', role: 'Founder & Head of Growth', company: 'Pulse Forge', category: 'Founder Journey' },
-  { name: 'Sofia Lane', role: 'Founder & COO', company: 'Atlas Collective', category: 'Founder Interview' },
-  { name: 'Miles Everett', role: 'Founder & Creative Director', company: 'Verve Studio', category: 'Leadership Profile' },
-  { name: 'Aria Chen', role: 'Founder & CEO', company: 'Rift Labs', category: 'Startup Journey' },
-  { name: 'Noah Kline', role: 'Founder & CTO', company: 'Nimbus AI', category: 'Founder Interview' },
-  { name: 'Lena Brooks', role: 'Founder & Chief Strategy Officer', company: 'Horizon Loop', category: 'Founder Journey' },
-  { name: 'Oliver Dale', role: 'Founder & Head of Operations', company: 'Seedwell', category: 'Leadership Profile' },
-];
+// const founderProfiles = [
+//   { name: 'Ava Clarke', role: 'Founder & CEO', company: 'Helio Ventures', category: 'Founder Interview' },
+//   { name: 'Noah Reed', role: 'Co-founder & Chief Product Officer', company: 'Nexera', category: 'Startup Journey' },
+//   { name: 'Maya Reeves', role: 'Founder & Managing Partner', company: 'Lumen Labs', category: 'Leadership Profile' },
+//   { name: 'Ezra Chen', role: 'Founder & Head of Growth', company: 'Pulse Forge', category: 'Founder Journey' },
+//   { name: 'Sofia Lane', role: 'Founder & COO', company: 'Atlas Collective', category: 'Founder Interview' },
+//   { name: 'Miles Everett', role: 'Founder & Creative Director', company: 'Verve Studio', category: 'Leadership Profile' },
+//   { name: 'Aria Chen', role: 'Founder & CEO', company: 'Rift Labs', category: 'Startup Journey' },
+//   { name: 'Noah Kline', role: 'Founder & CTO', company: 'Nimbus AI', category: 'Founder Interview' },
+//   { name: 'Lena Brooks', role: 'Founder & Chief Strategy Officer', company: 'Horizon Loop', category: 'Founder Journey' },
+//   { name: 'Oliver Dale', role: 'Founder & Head of Operations', company: 'Seedwell', category: 'Leadership Profile' },
+// ];
 
 function getQueryParam(name) {
   return new URLSearchParams(window.location.search).get(name);
@@ -80,14 +80,25 @@ function initAOSOnce() {
   AOS_INITIALIZED = true;
 }
 
+function refreshAOSHardSafe() {
+  if (window.AOS && typeof AOS.refreshHard === 'function') AOS.refreshHard();
+  else if (window.AOS) AOS.refresh();
+}
+
+// =========================================================
+// Component Injection Section
+// =========================================================
+
 async function loadComponent(url, placeholderId, callback) {
   try {
     const response = await fetch(url);
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
+
     const html = await response.text();
     const placeholder = document.getElementById(placeholderId);
+
     if (placeholder) {
       placeholder.innerHTML = html;
       if (window.AOS) AOS.refresh();
@@ -99,11 +110,6 @@ async function loadComponent(url, placeholderId, callback) {
 }
 
 function getCardsJsonUrl() {
-  // Resolve cards.json relative to the current HTML file location.
-  // Requirement: when on pages/* (including nested), use "../cards.json".
-  // Avoid fragile folder-name assumptions by checking the current file's relative directory depth.
-  // In this project: all pages that use this script live under /pages/ (including pages/article*, pages in subfolders).
-
   const path = document.location.pathname || '';
   const parts = path.split('/').filter(Boolean);
   const hasPagesRoot = parts[0] === 'pages' || parts.includes('pages');
@@ -112,7 +118,12 @@ function getCardsJsonUrl() {
   return hasPagesRoot ? '../cards.json' : 'cards.json';
 }
 
+let __navbarFooterInjected = false;
+
 async function injectNavbarFooter() {
+  if (__navbarFooterInjected) return;
+  __navbarFooterInjected = true;
+
   const pathFromPages = '../components';
   const pathFromRoot = 'components';
 
@@ -123,11 +134,6 @@ async function injectNavbarFooter() {
     loadComponent(`${base}/navbar.html`, DOM_SELECTORS.navbarPlaceholder),
     loadComponent(`${base}/footer.html`, DOM_SELECTORS.footerPlaceholder),
   ]);
-}
-
-function refreshAOSHardSafe() {
-  if (window.AOS && typeof AOS.refreshHard === 'function') AOS.refreshHard();
-  else if (window.AOS) AOS.refresh();
 }
 
 // =========================================================
@@ -167,7 +173,7 @@ async function loadCardDetail() {
 
     if (window.AOS) AOS.refresh();
 
-    const card = slug ? cards.find((c) => slugify(c.name) === decodeURIComponent(slug)) : null;
+    const card = slug ? cards.find((c) => slugify(c.name) === slug) : null;
     if (!card) {
       throw new Error(`Article not found for slug=${slug || 'missing'}`);
     }
@@ -245,11 +251,14 @@ async function loadCardDetail() {
     const rawDocForLink = card.doc || '';
     const normalizedDocForLink = rawDocForLink.startsWith('article/') ? `../${rawDocForLink}` : rawDocForLink;
 
+    // Hide download/caption area (layout-only stylesheet decision)
+    // Keep content minimal to avoid extra UI elements.
     if (card.doc) {
-      detailMediaCaption.innerHTML = `<a href="${normalizedDocForLink}" target="_blank" rel="noopener">Download the interview document</a>`;
+      detailMediaCaption.textContent = card.caption || '';
     } else {
       detailMediaCaption.textContent = card.caption || `${card.name || '—'}`;
     }
+
 
     const tags = Array.isArray(card.tags) && card.tags.length ? card.tags : [card.storyLabel || 'Founder Story'];
 
@@ -345,8 +354,7 @@ function renderHeroAndCardsFromState(state) {
 
   const heroCard = cards.find((c) => c.id === heroId) || cards[0];
 
-  // If the hero candidate is marked as "Other" in cards.json,
-  // the listing UI may show the story label/preview beneath.
+
   // Hide non-founder label by falling back to a real founder card.
   if (heroCard && heroCard.storyLabel && heroCard.storyLabel.toLowerCase() === 'other') {
     const fallback = cards.find((c) => c.storyLabel && c.storyLabel.toLowerCase() !== 'other');
@@ -362,10 +370,11 @@ function renderHeroAndCardsFromState(state) {
   heroImage.src = heroCard.image;
   heroImage.alt = heroCard.name;
   heroCategory.textContent = heroCard.storyLabel;
-  heroHeading.textContent = heroCard.title || `Founder story from ${heroCard.name}`;
-  heroPreview.textContent = heroCard.storyPreview;
+  // heroHeading.textContent = heroCard.title || `Founder story from ${heroCard.name}`;
+  // heroPreview.textContent = heroCard.storyPreview;
   heroFounderName.textContent = heroCard.name;
-  heroFounderRole.textContent = 'Founder';
+  heroFounderRole.textContent = heroCard.role && heroCard.role.trim() ? heroCard.role : 'Founder';
+
 
   // Slug-based hero CTA (so this listing page card links like article cards)
   const heroReadStory = document.getElementById('heroReadStory');
@@ -445,7 +454,7 @@ async function loadArticleListing() {
 
     cards: [],
     heroId: null,
-    cardsPerPage: 9,
+    cardsPerPage:12,
     currentPage: 1,
     heroImage,
     heroCategory,

@@ -82,11 +82,7 @@
               <div id="detailHighlights" class="story-highlights"></div>
               <div id="detailConclusion" class="detail-conclusion"></div>
 
-              <div class="detail-actions">
-                <a href="./article.html" class="btn btn-read btn-lg"
-                  >Back to magazine</a
-                >
-              </div>
+
             </div>
           </article>
         </div>
@@ -97,6 +93,16 @@
         class="alert alert-danger mt-4 d-none"
         role="alert"
       ></div>
+
+      <div class="mt-5 mb-3 text-center">
+        <button
+          type="button"
+          class="btn btn-primary"
+          onclick="if (window.history.length > 1) { history.back(); } else { window.location.href = './article.html'; }"
+        >
+          <i class="bi bi-arrow-left me-2"></i>Back to articles
+        </button>
+      </div>
     </main>
 
     <div id="footer-placeholder"></div>
